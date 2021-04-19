@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Homepage from './pages/Homepage';
@@ -9,8 +10,13 @@ import Navigation from './components/Navigation';
 import './App.css';
 import Container from 'react-bootstrap/Container';
 
-
 function App() {
+  //
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
   return (
     <div>
     <Router>
