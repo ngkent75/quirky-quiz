@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.css';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
-function Nav() {
+function Navigation() {
     return (
         <Container>
-            <Nav justify variant="tabs" defaultActiveKey="/home">
-                <Nav.Item>
+            <Navbar justify variant="tabs" defaultActiveKey="/home">
+            <Nav.Item>
                     <Nav.Link href="/home">Active</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
@@ -19,9 +19,9 @@ function Nav() {
                 <Nav.Link eventKey="disabled" disabled>Disabled
                 </Nav.Link>
                 </Nav.Item>
-            </Nav>
+            </Navbar>
         </Container>
     );
 }
 
-export default Nav;
+export default Navigation;

@@ -1,11 +1,7 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 function Homepage () {
-    return(
-        <Container>
-        </Container>
-    )
+    return <h1>Home</h1>
 }
 
 export default Homepage;
