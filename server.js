@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const cors = require("cors"); //cors enables cross origin resource sharing
+const sequelize = require('./config/connection');
 const app = express();
 const session = require("express-session");
 require("dotenv").config();
@@ -29,6 +30,9 @@ app.use("/login", (req, res) => {
   });
 });
 
-app.listen(8080, () =>
-  console.log("API is running on http://localhost:8080/login")
-);
+
+sequelize.sync().then(() => {
+  app.listen(8080, () =>
+    console.log("API is running on http://localhost:8080/login")
+  );
+});

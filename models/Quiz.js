@@ -9,10 +9,6 @@ Quiz.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        results: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
