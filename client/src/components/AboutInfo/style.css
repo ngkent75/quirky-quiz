@@ -1,0 +1,49 @@
+:root {
+  --blue: #127AA2;
+  --yellow: #F5E182;
+  --red: #FF4262
+}
+
+section {
+  background-color: var(--blue);
+  margin: 0;
+  padding: 12px
+}
+
+.logo {
+  color: var(--yellow);
+  font-size: 54px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.info {
+  color: var(--yellow);
+  font-size: 26px;
+  min-height: 300px;
+}
+
+.arrowButtons {
+  display: flex;
+  justify-content: space-around;
+}
+ .forwardArrow,
+ .backwardArrow {
+  background-color: var(--blue);
+  border: none;
+  color:var(--yellow);
+ }
+
+.sample {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.sampleButton {
+  background-color: var(--yellow);
+  color: var(--red);
+  border-color: var(--yellow);
+  border-radius: 4px;
+  border-style: solid;
+}
