@@ -7,10 +7,10 @@ function Navigation() {
     return (
         <Container>
             <Navbar justify variant="tabs" defaultActiveKey="/home">
-                <NavLink to="/Homepage">Home</NavLink>
+                <NavLink to="/Home">Home</NavLink>
                 <NavLink to="/Profile">Profile</NavLink>
                 <NavLink to="/About">About</NavLink>
-                <NavLink to="/Quiz">Quiz</NavLink>
+                {/* <NavLink to="/Quiz">Quiz</NavLink> */}
             </Navbar>
         </Container>
     );
