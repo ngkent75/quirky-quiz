@@ -46,4 +46,4 @@ Quiz.belongsToMany(Category, { through: QuizCategory, foreignKey: 'quiz_id' });
 
 Category.belongsToMany(Quiz, { through: QuizCategory, foreignKey: 'category_id' });
 
-module.exports = { Quiz, User, Question, Answer, Category, QuizCategory };
+module.exports = { Quiz, User, Question, Answer, Category, QuizCategory, Result };

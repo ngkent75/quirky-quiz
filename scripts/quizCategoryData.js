@@ -2,7 +2,8 @@ const { QuizCategory } = require('../models');
 
 const quizCategoryData = [
     {
-
+        "quiz_id": 1,
+        "category_id": 4
     }
 ]
 
