@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import style from './style.css'
 
 function About () {
 
@@ -28,12 +29,15 @@ function About () {
     }
     return (
         <>
-        <div className="logog">Logo</div>
+        <section>
+        <div className="logo">Logo</div>
         <div className="info">{info[currentInfo]}</div>
-        <div className="buttons">
-        <button className="forwardArrow" onClick={handleBackwardButtonClick}>Backward</button>
-        <button className="backwardArrow" onClick={handleForwardButtonClick}>Forward</button>
+        <div className="arrowButtons">
+        <button className="forwardArrow" onClick={handleBackwardButtonClick}><i class="fas fa-arrow-circle-left"></i></button>
+        <button className="backwardArrow" onClick={handleForwardButtonClick}><i class="fas fa-arrow-right"></i></button>
         </div>
+        <div className="sample"><button className="sampleButton">Sample Quiz</button></div>
+        </section>
         </>
     )
     
