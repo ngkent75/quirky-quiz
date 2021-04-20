@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import style from './style.css'
+import './style.css';
+import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
+
+
 
 function About () {
 
@@ -7,7 +11,7 @@ function About () {
     const info = [
         "Quirky Quiz is a collection of quizzes made by our user community, for our user community. Hit the arrow to learn what a Quirky Quiz is!",
         "Quirky Quizzes are a type of funny quiz that contain a varying number of results. Each result depends on the the subject of the quiz.",
-        "As you answer each question, you reveal a little bit about yourself. After completion of the quiz, you are provided with the result that is most in line with your personality.",
+        "As you answer each question, you reveal a little bit about yourself. After completion of the quiz, you are provided with the result that is most in line with your answers.",
         "As a user, you may not only take Quirky Quizzes, you can make them too! The Quirk level is in your hands.",
         "Still not sure about Quirky Quizzes? Try a sample quiz to catch the Quirk!"
     ]
@@ -33,8 +37,8 @@ function About () {
         <div className="logo">Logo</div>
         <div className="info">{info[currentInfo]}</div>
         <div className="arrowButtons">
-        <button className="forwardArrow" onClick={handleBackwardButtonClick}><i class="fas fa-arrow-circle-left"></i></button>
-        <button className="backwardArrow" onClick={handleForwardButtonClick}><i class="fas fa-arrow-right"></i></button>
+        <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft size="4x"/></button>
+        <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button>
         </div>
         <div className="sample"><button className="sampleButton">Sample Quiz</button></div>
         </section>

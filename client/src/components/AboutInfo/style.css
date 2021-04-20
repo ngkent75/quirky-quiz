@@ -27,6 +27,12 @@ section {
   display: flex;
   justify-content: space-around;
 }
+ .forwardArrow,
+ .backwardArrow {
+  background-color: var(--blue);
+  border: none;
+  color:var(--yellow);
+ }
 
 .sample {
   display: flex;
