@@ -1,16 +1,13 @@
 import React from 'react';
-import Navigation from '../components/Navigation'
 import Header from '../components/Header'
 
-function Homepage() {
+function Homepage () {
     return (
         <>
-            <h1>Hello</h1>
-            <Navigation />
+            <h1>LOGO</h1>
             <Header />
-            <h1>Home</h1>
         </>
     )
-}
+    };
 
 export default Homepage;
