@@ -5,20 +5,14 @@ import Homepage from './pages/Homepage';
 import Profile from './pages/Profile';
 import Quiz from './pages/Quiz';
 import About from './pages/About';
-// import Header from './components/Header';
 // import Footer from './components/Footer';
-import Navigation from './components/Navigation';
 import './App.css';
 import Container from 'react-bootstrap/Container';
-import Login from './components/Login/Login';
-import useToken from './utils/useToken';
 
 function App() {
   return (
     <div>
     <Router>
-      <Navigation />
-      {/* <Header /> */}
       <Container>
         <Route exact path='/' component={Homepage}/>
         <Route exact path='/home' component={Homepage}/>
@@ -27,6 +21,7 @@ function App() {
         <Route exact path='/quiz' component={Quiz}/>
        </Container>
     </Router>
+    
     </div>
   );
 }
