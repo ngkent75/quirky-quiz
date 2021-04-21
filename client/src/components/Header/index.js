@@ -1,17 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
-import { Container, Jumbotron } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 function Header() {
     return (
-        <Jumbotron fluid>
             <Container>
-                <h1>Don't know where to start? Click on a category below to see some popular quizzes!</h1>
+                <h1>Welcome to Quirky Quiz!</h1>
                 <p>
-                **Clickable Links for searchable categories**
+                    Please take a moment to read our <span> <Link to='/about'>about</Link> </span> page if you aren't familiar with our site! 
+                </p>
+                <p>
+                    Otherwise feel free to <span> <Link to='/profile'>login,</Link> </span> <span> <Link to='/profile'>sign-up</Link> </span>and continue making or taking our Quirky Quizzes!
                 </p>
             </Container>
-        </Jumbotron>
     );
 }
 

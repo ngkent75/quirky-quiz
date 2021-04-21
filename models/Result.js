@@ -1,16 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Result extends Model { };
+class Result extends Model { }
 
 Result.init(
     {
-        result: {
+        name: {
             type: DataTypes.STRING,
-            allowNull: false,
-        },
-        value: {
-            type: DataTypes.INTEGER,
             allowNull: false,
         },
         quiz_id: {
