@@ -37,7 +37,7 @@ function About () {
         <div className="logo">Logo</div>
         <div className="info">{info[currentInfo]}</div>
         <div className="arrowButtons">
-        <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft size="4x"/></button>
+        <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft /></button>
         <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button>
         </div>
         <div className="sample"><button className="sampleButton">Sample Quiz</button></div>
