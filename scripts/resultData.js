@@ -1,24 +1,20 @@
-const { Result } = require('../models')
+const { Result } = require('../models');
 
 const resultData = [
     {
-        "result": "Shrek",
-        "value": 0,
+        "name": "Shrek",
         "quiz_id": 1
     },
     {
-        "result": "Donkey",
-        "value": 0,
+        "name": "Donkey",
         "quiz_id": 1
     },
     {
-        "result": "Fiona",
-        "value": 0,
+        "name": "Fiona",
         "quiz_id": 1
     },
     {
-        "result": "Dragon",
-        "value": 0,
+        "name": "Dragon",
         "quiz_id": 1
     }
 ]
