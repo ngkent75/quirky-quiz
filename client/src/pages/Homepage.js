@@ -7,8 +7,10 @@ function Homepage () {
     return (
         <>
             <Navigation />
-            <h1>LOGO</h1>
+            <div className='container logo' align='center'>
+            <h1> <img src='./assets/QuirkyQuiz.jpg' height='300px' width='300px'/> </h1>
             <Header />
+            </div>
         </>
     )
     };
