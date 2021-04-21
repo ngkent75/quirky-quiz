@@ -15,14 +15,12 @@ async function loginUser(credentials) {
 export default function Login({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const [email, setEmail] = useState();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const token = await loginUser({
       username,
       password,
-      email,
     });
     setToken(token);
   };
@@ -33,23 +31,16 @@ export default function Login({ setToken }) {
           <h2 className="form-signin-heading">Please Login</h2>
           <input
             type="text"
-            className="form-control "
+            className="form-control mb-2"
             name="username"
             placeholder="Username"
             required=""
             onChange={(event) => setUserName(event.target.value)}
           />
-          <input
-            type="email"
-            className="form-control"
-            name="email"
-            placeholder="Email"
-            required=""
-            onChange={(event) => setEmail(event.target.value)}
-          />
+
           <input
             type="password"
-            className="form-control"
+            className="form-control mb-4"
             name="password"
             placeholder="Password"
             required=""
@@ -59,7 +50,7 @@ export default function Login({ setToken }) {
           <button className="btn btn-lg btn-primary btn-block" type="submit">
             Login
           </button>
-          <p className="text-right">
+          <p className="text-right mt-2">
             Dont have an account?<a href="/Signup">Sign Up</a>
           </p>
         </form>
