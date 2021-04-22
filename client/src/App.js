@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/home" component={Homepage} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/quiz/:id" component={Quiz} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={SignUpPage} />
         </Container>
