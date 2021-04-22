@@ -1,9 +1,13 @@
 const router = require('express').Router();
-const { Category } = require('../../models');
+const { Category, Quiz } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
-        const getCategory = await Category.findAll();
+        const getCategory = await Category.findAll({
+            include: [{
+                model: Quiz
+            }]
+        });
         res.status(200).json(getCategory);
     } catch (err) {
         res.status(500).json(err);
@@ -12,7 +16,11 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const categoryData = await Category.findByPk(req.params.id);
+        const categoryData = await Category.findByPk(req.params.id, {
+            include: [{
+                model: Quiz
+            }]
+        });
         res.status(200).json(categoryData);
     } catch (err) {
         res.status(500).json(err);
