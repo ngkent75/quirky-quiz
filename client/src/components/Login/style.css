@@ -1,0 +1,17 @@
+* {
+  /* background-color: orange; */
+}
+.container {
+  text-align: center;
+}
+
+.container h2 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 18px;
+}
+p a {
+  font-size: 20px;
+}
