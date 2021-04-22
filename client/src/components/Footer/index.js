@@ -7,7 +7,7 @@ import { GoMarkGithub } from 'react-icons/go';
 
 function Footer () {
     return (
-        <footer className='bg-dark text-center text-white'>
+        <footer className='bg-white text-center text-white'>
             <div className='container p-3 pb-0'>
                 <section className='mb-2'>
                    <Link to='/home' className='btn btn-outline-light btn-floating m-1' role='button' title='Home'><BiHomeHeart/></Link>
@@ -18,7 +18,7 @@ function Footer () {
 
                    <a href='https://github.com/ngkent75/quirky-quiz' target='_blank' className='btn btn-outline-light btn-floating m-1' role='button' title='Github Repo'>< GoMarkGithub/> </a>
                 </section>
-                <section className='text-center p-3'>
+                <section className='bg-dark text-center p-3'>
                     IM/NK/UR/HS <FaCopyright/> 2021
                 </section>
             </div>

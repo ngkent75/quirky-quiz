@@ -15,21 +15,21 @@ const Profile = () => {
         <>
             <Navigation />
             <h1>User's Profile</h1>
-            <div className='container'>
+            <div className='container' align='center'>
                 <div className='row'>
-                    <div className='col'>
+                    <div className='col-6'>
                         <Card style={{ width: '18rem' }} align='center'>
-                        <Card.Img variant="top" src="./assets/create-quiz.jpg" height='175px'/>
-                        <Card.Body>
-                            <Card.Title>Create a New Quiz</Card.Title>
-                            <Card.Text>
-                            Have an idea for a fun new quiz you'd like fellow users to take? Create your own quiz today!
-                            </Card.Text>
-                            <Button variant="primary">Click to Create</Button>
-                        </Card.Body>
+                            <Card.Img variant="top" src="./assets/create-quiz.jpg" height='175px'/>
+                            <Card.Body>
+                                <Card.Title>Create a New Quiz</Card.Title>
+                                <Card.Text>
+                                Have an idea for a fun new quiz you'd like fellow users to take? Create your own quiz today!
+                                </Card.Text>
+                                <Button variant="primary">Click to Create</Button>
+                            </Card.Body>
                         </Card>
                     </div>
-                    <div className='col'>
+                    <div className='col-6'>
                         <Card style={{ width: '18rem' }} align='center'>
                         <Card.Img variant="top" src="./assets/take-quiz.jpeg" height='175px'/>
                         <Card.Body>
@@ -44,8 +44,7 @@ const Profile = () => {
                         </Card.Body>
                         </Card>
                     </div>
-
-                    <div className='col'>
+                    <div className='col-6'>
                         <Card style={{ width: '18rem' }} align='center'>
                         <Card.Img variant="top" src="./assets/past-results.jpeg" height='175px'/>
                         <Card.Body>
@@ -57,7 +56,7 @@ const Profile = () => {
                         </Card.Body>
                         </Card>
                     </div>
-                    <div className='col'>
+                    <div className='col-6'>
                         <Card style={{ width: '18rem' }} align='center'>
                         <Card.Img variant="top" src="./assets/share.jpeg" height='175px'/>
                         <Card.Body>
