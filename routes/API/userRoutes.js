@@ -1,12 +1,18 @@
 const router = require('express').Router();
-const { User, Result } = require('../../models');
+const { User, Result, Quiz } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
         const getUser = await User.findAll({
-            include: [{
-                model: Result
-            }]
+            include:
+                [
+                    {
+                        model: Result
+                    },
+                    {
+                        model: Quiz
+                    }
+                ]
         });
         res.status(200).json(getUser);
     } catch (err) {
@@ -17,9 +23,15 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
-            include: [{
-                model: Result
-            }]
+            include:
+                [
+                    {
+                        model: Result
+                    },
+                    {
+                        model: Quiz
+                    }
+                ]
         });
         res.status(200).json(userData);
     } catch (err) {
