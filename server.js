@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const cors = require("cors"); //cors enables cross origin resource sharing
+const routes = require('./routes');
 const sequelize = require('./config/connection');
 const app = express();
 const session = require("express-session");
@@ -35,6 +36,8 @@ app.use("/login", (req, res) => {
     token: "test123",
   });
 });
+
+app.use(routes);
 
 
 sequelize.sync().then(() => {
