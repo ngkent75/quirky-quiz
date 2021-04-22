@@ -5,11 +5,11 @@ import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstr
 function Navigation() {
     return (
         <Container>
-            <Navbar bg="light" expand="lg">
+            <Navbar className='nav' bg="white" expand="lg">
             <Navbar.Brand Link to="/home">Quirky Quiz</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+                <Nav className="mr-auto !important">
                 <NavLink to="/home">Home</NavLink>
                 <NavLink to="/profile">Profile</NavLink>
                 <NavLink to="/about">About</NavLink>
