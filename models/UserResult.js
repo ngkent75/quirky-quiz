@@ -5,6 +5,12 @@ class UserResult extends Model { };
 
 UserResult.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         result_id: {
             type: DataTypes.INTEGER,
             references: {

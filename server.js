@@ -37,6 +37,9 @@ app.use("/login", (req, res) => {
   });
 });
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use(routes);
 
 
