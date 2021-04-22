@@ -66,7 +66,8 @@ const Quiz = () => {
     console.log("primary key of quiz:", id);
     //some API call to get quiz
     setQuestions(exampleQuestions);
-  }, [id])
+  }, [id]);
+  
   useEffect(() => {
     console.log(quizResults);
   }, [quizResults])
