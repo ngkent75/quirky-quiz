@@ -6,7 +6,6 @@ const seedQuestion = require('./questionData');
 const seedAnswer = require('./answerData');
 const seedCategory = require('./categoryData');
 const seedQuizCategory = require('./quizCategoryData');
-const seedResult = require('./resultData');
 const seedUserResult = require('./userResultData');
 
 const seedDatabase = async () => {
@@ -24,8 +23,6 @@ const seedDatabase = async () => {
 
         await seedCategory();
 
-        await seedResult();
-        
         await seedQuizCategory();
 
         await seedUserResult();

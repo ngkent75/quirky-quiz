@@ -5,7 +5,7 @@ class Question extends Model { }
 
 Question.init(
     {
-        name: {
+        questionText: {
             type: DataTypes.STRING,
             allowNull: false,
         },
