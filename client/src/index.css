@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Media Queries
+@media screen and (max-width: 726px) {
+  .container {
+    display: flex;
+
+    grid-gap: 4px;
+    margin: 4px;
+    justify-items: center;
+    justify-content: center;
+  }
+} 
+
+@media screen and (max-width: 526px) {
+  .container {
+    display: flex;
+    margin: 8px;
+    justify-items: center;
+    justify-content: center;
+  }
+} */
