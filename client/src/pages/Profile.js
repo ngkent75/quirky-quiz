@@ -3,6 +3,8 @@
 import Navigation from '../components/Navigation';
 import { Card, Button } from 'react-bootstrap';
 import Footer from '../components/Footer';
+import Particle from '../components/Particles';
+import '../App.css';
 
 const Profile = () => {
     // const { token, setToken } = useToken();
@@ -14,6 +16,7 @@ const Profile = () => {
     return (
         <>
             <Navigation />
+            <Particle />
             <h1>User's Profile</h1>
             <div className='container' align='center'>
                 <div className='row'>

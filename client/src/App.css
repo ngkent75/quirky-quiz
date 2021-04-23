@@ -40,10 +40,9 @@
 /* Media Queries */
 @media screen and (max-width: 726px) {
   .container {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    grid-template-rows: auto;
-    grid-gap: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 4px;
     justify-items: center;
     justify-content: center;
@@ -52,9 +51,9 @@
 
 @media screen and (max-width: 526px) {
   .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 240px);
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 8px;
     justify-items: center;
     justify-content: center;

@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 function Header() {
     return (
             <Container>
-                <h1>Welcome to Quirky Quiz!</h1>
+                <h1 className='header'>Welcome to Quirky Quiz!</h1>
                 <p className='welcome'>
                     Please take a moment to read our <span> <Link to='/about'>about</Link> </span> page if you aren't familiar with our site! 
                 </p>
