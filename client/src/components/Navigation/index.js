@@ -6,7 +6,7 @@ function Navigation() {
     return (
         <Container>
             <Navbar className='nav' bg="white" expand="lg">
-            <Navbar.Brand Link to="/home">Quirky Quiz</Navbar.Brand>
+            <Navbar.Brand>Quirky Quiz</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto !important">
