@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Result, Quiz } = require('../../models');
+const { User, Quiz, UserResult } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -7,10 +7,10 @@ router.get('/', async (req, res) => {
             include:
                 [
                     {
-                        model: Result
+                        model: Quiz
                     },
                     {
-                        model: Quiz
+                        model: UserResult
                     }
                 ]
         });
@@ -26,10 +26,10 @@ router.get('/:id', async (req, res) => {
             include:
                 [
                     {
-                        model: Result
+                        model: Quiz
                     },
                     {
-                        model: Quiz
+                        model: UserResult
                     }
                 ]
         });

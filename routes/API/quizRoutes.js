@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Quiz, Category, Question, Answer, Result } = require('../../models');
+const { Quiz, Category, Question, Answer } = require('../../models');
 
 router.get('/', async (req, res) => {
 	try {
@@ -8,9 +8,6 @@ router.get('/', async (req, res) => {
 				[
 					{
 						model: Category
-					},
-					{
-						model: Result
 					},
 					{
 						model: Question,
@@ -35,9 +32,6 @@ router.get('/:id', async (req, res) => {
 				[
 					{
 						model: Category
-					},
-					{
-						model: Result
 					},
 					{
 						model: Question,

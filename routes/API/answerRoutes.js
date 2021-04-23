@@ -3,7 +3,7 @@ const { Answer } = require('../../models');
 
 router.get('/', async (req, res) => {
     try {
-        const answerData = await Answer.findAll();
+        const answerData = await Answer.findAll({});
         res.status(200).json(answerData);
     } catch (err) {
         res.status(500).json(err);

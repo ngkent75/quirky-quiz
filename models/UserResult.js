@@ -11,19 +11,16 @@ UserResult.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        result_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'result',
-                key: 'id',
-            },
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
                 key: 'id',
             },
+        },
+        result: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {
