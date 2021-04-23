@@ -44,7 +44,7 @@ app.use(routes);
 
 
 sequelize.sync().then(() => {
-  app.listen(8080, () =>
-    console.log("API is running on http://localhost:8080/")
+  app.listen(PORT, () =>
+    console.log("API is running on http://localhost:3001/")
   );
 });

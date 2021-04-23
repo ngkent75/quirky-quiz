@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import API from '../utils/API';
 
 const Quiz = () => {
   let { id } = useParams()
@@ -8,7 +9,7 @@ const Quiz = () => {
   const exampleQuestions = [
     {
       questionText: "What is your ideal vacation?",
-      answerOptions: [
+      answers: [
         { answerText: "Coney Island and a slice", result: "dorothy" },
         { answerText: "A tour of the fjords of Norway", result: "rose" },
         { answerText: "A riverboat cruise of Savannah GA", result: "blanche" },
@@ -17,7 +18,7 @@ const Quiz = () => {
     },
     {
       questionText: "How do you prefer to dress?",
-      answerOptions: [
+      answers: [
         { answerText: "Shoulder pads on shoulder pads", result: "dorothy" },
         { answerText: "Tasteful sweats for keeping on the move", result: "rose" },
         { answerText: "Anything with sequins and a low cut", result: "blanche" },
@@ -26,7 +27,7 @@ const Quiz = () => {
     },
     {
       questionText: "Who is you ideal partner?",
-      answerOptions: [
+      answers: [
         { answerText: "Someone who will both challenge me and respect me", result: "dorothy" },
         { answerText: "Someone who will love me unconditionaly, despite my flaws", result: "rose" },
         { answerText: "No way i'm locking it down to one", result: "blanche" },
@@ -35,7 +36,7 @@ const Quiz = () => {
     },
     {
       questionText: "What is your ideal vacation?",
-      answerOptions: [
+      answers: [
         { answerText: "Coney Island and a slice", result: "dorothy" },
         { answerText: "A tour of the fjords of Norway", result: "rose" },
         { answerText: "A riverboat cruise of Savannah GA", result: "blanche" },
@@ -44,8 +45,8 @@ const Quiz = () => {
     },
     {
       questionText: "What is your ideal vacation?",
-      answerOptions: [
-        { answerText: "Coney Island and a slice", result: "dorothy" },
+      answers: [
+        { answerText: "Coney Island and a slice", result: 'dorothy' },
         { answerText: "A tour of the fjords of Norway", result: "rose" },
         { answerText: "A riverboat cruise of Savannah GA", result: "blanche" },
         { answerText: "A Sicillian knife fight", result: "sophia" }
@@ -61,10 +62,12 @@ const Quiz = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-  // const [lastQuestion, setLastQuestion] = useState(false)
+
   useEffect(() => {
     console.log("primary key of quiz:", id);
     //some API call to get quiz
+    API.getQuiz(id)
+    .then(results => console.log(results.data))
     setQuestions(exampleQuestions);
   }, [id]);
   
@@ -134,7 +137,7 @@ const Quiz = () => {
                 </div>
                 <div className="questionText">{questions[currentQuestion].questionText}</div>
                 <div className="answer-options">
-                  {questions[currentQuestion].answerOptions.map(answerOption =>
+                  {questions[currentQuestion].answers.map(answerOption =>
                     <button key={answerOption.result}
                       onClick={() => handleAnswerButtonClick(answerOption.result)}>
                       {answerOption.answerText}
