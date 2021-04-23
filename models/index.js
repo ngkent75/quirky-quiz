@@ -5,7 +5,6 @@ const Answer = require('./Answer');
 const Category = require('./Category');
 const QuizCategory = require('./QuizCategory');
 const UserResult = require('./UserResult');
-const Result = require('./Result');
 
 // One to many relationship for user and quiz
 User.hasMany(Quiz, {
@@ -37,26 +36,23 @@ Answer.belongsTo(Question, {
     foreignKey: 'question_id',
 });
 
-// One to many relationship for quiz and result
-Quiz.hasMany(Result, {
-    foreignKey: 'quiz_id',
-    onDeletge: 'CASCADE',
+// One to many relationship for user and UserResults
+
+User.hasMany(UserResult, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
 });
 
-Result.belongsTo(Quiz, {
-    foreignKey: 'quiz_id'
-})
-
+UserResult.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
 // Many to many relationship for quiz and category through quizcategory
 Quiz.belongsToMany(Category, { through: QuizCategory, foreignKey: 'quiz_id' });
 
 Category.belongsToMany(Quiz, { through: QuizCategory, foreignKey: 'category_id' });
 
-// Many to many relationship for result and user through userresult
-User.belongsToMany(Result, { through: UserResult, foreignKey: 'user_id' });
-
-Result.belongsToMany(User, { through: UserResult, foreignKey: 'result_id' });
 
 
-module.exports = { User, Result, Question, Answer, Quiz, Category, QuizCategory, UserResult };
+
+module.exports = { User, Question, Answer, Quiz, Category, QuizCategory, UserResult };
