@@ -5,7 +5,11 @@ class Answer extends Model { };
 
 Answer.init(
     {
-        answer: {
+        answerText: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        result: {
             type: DataTypes.STRING,
             allowNull: false,
         },

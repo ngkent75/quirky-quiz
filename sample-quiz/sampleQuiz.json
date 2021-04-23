@@ -3,7 +3,7 @@
   "questions": [
     {
       "questionText": "What is your ideal vacation?",
-      "answerOptions": [
+      "answers": [
         {"answerText": "Coney Island and a slice", "result": "dorothy"},
         {"answerText": "A tour of the fjords of Norway", "result": "rose"},
         {"answerText": "A riverboat cruise of Savannah GA", "result": "blanche"},
@@ -12,7 +12,7 @@
     },
     {
       "questionText": "How do you prefer to dress?",
-      "answerOptions": [
+      "answers": [
         {"answerText": "Shoulder pads on shoulder pads", "result": "dorothy"},
         {"answerText": "Tasteful sweats for keeping on the move", "result": "rose"},
         {"answerText": "Anything with sequins and a low cut", "result": "blanche"},
@@ -21,7 +21,7 @@
     },
     {
       "questionText": "Who is you ideal partner?",
-      "answerOptions": [
+      "answers": [
         {"answerText": "Someone who will both challenge me and respect me", "result": "dorothy"},
         {"answerText": "Someone who will love me unconditionaly, despite my flaws", "result": "rose"},
         {"answerText": "No way i'm locking it down to one", "result": "blanche"},
@@ -30,7 +30,7 @@
     },
     {
       "questionText": "What is your ideal vacation?",
-      "answerOptions": [
+      "answers": [
         {"answerText": "Coney Island and a slice", "result": "dorothy"},
         {"answerText": "A tour of the fjords of Norway", "result": "rose"},
         {"answerText": "A riverboat cruise of Savannah GA", "result": "blanche"},
@@ -39,7 +39,7 @@
     },
     {
       "questionText": "What is your ideal vacation?",
-      "answerOptions": [
+      "answers": [
         {"answerText": "Coney Island and a slice", "result": "dorothy"},
         {"answerText": "A tour of the fjords of Norway", "result": "rose"},
         {"answerText": "A riverboat cruise of Savannah GA", "result": "blanche"},

@@ -2,67 +2,83 @@ const { Answer } = require('../models');
 
 const answerData = [
     {
-        "answer": "I am grumpy but soft on the inside.",
+        "answerText": "I am grumpy but soft on the inside.",
+        "result": "Shrek",
         "question_id": 1
     },
     {
-        "answer": "I am like a princess, but don't mess with me or you'll be sorry!",
+        "answerText": "I am like a princess, but don't mess with me or you'll be sorry!",
+        "result": "Fiona",
         "question_id": 1
     },
     {
-        "answer": "I really like socializing, and I get lonely easily.",
+        "answerText": "I really like socializing, and I get lonely easily.",
+        "result": "Donkey",
         "question_id": 1
     },
     {
-        "answer": "I will literally eat people.",
+        "answerText": "I will literally eat people.",
+        "result": "Dragon",
         "question_id": 1
     },
     {
-        "answer": "They judge me before they even know me. That's why I'm better off alone.",
+        "answerText": "They judge me before they even know me. That's why I'm better off alone.",
+        "result": "Shrek",
         "question_id": 2
     },
     {
-        "answer": "In the morning, I'm making waffles",
+        "answerText": "In the morning, I'm making waffles",
+        "result": "Fiona",
         "question_id": 2
     },
     {
-        "answer": "You know, you should sweep me off my feet, out yonder window and down a rope onto your valiant steed.",
+        "answerText": "You know, you should sweep me off my feet, out yonder window and down a rope onto your valiant steed.",
+        "result": "Donkey",
         "question_id": 2
     },
     {
-        "answer": "RAAAAAWWWWWWRRRR",
+        "answerText": "RAAAAAWWWWWWRRRR",
+        "result": "Dragon",
         "question_id": 2
     },
     {
-        "answer": "Scare him away.",
+        "answerText": "Scare him away.",
+        "result": "Shrek",
         "question_id": 3
     },
     {
-        "answer": "Play nice, then kick his butt with kung fu.",
+        "answerText": "Play nice, then kick his butt with kung fu.",
+        "result": "Fiona",
         "question_id": 3
     },
     {
-        "answer": "Try to talk him to death.",
+        "answerText": "Try to talk him to death.",
+        "result": "Donkey",
         "question_id": 3
     },
     {
-        "answer": "Eat him.",
+        "answerText": "Eat him.",
+        "result": "Dragon",
         "question_id": 3
     },
     {
-        "answer": "Really sweet, but also really badass",
+        "answerText": "Really sweet, but also really badass",
+        "result": "Shrek",
         "question_id": 4
     },
     {
-        "answer": "Puts up a tough act, but is actually really caring and protective on the inside.",
+        "answerText": "Puts up a tough act, but is actually really caring and protective on the inside.",
+        "result": "Fiona",
         "question_id": 4
     },
     {
-        "answer": "Powerful. Knows what they want and isn't afraid to go for it.",
+        "answerText": "Powerful. Knows what they want and isn't afraid to go for it.",
+        "result": "Donkey",
         "question_id": 4
     },
     {
-        "answer": "Funny, light-hearted, and charismatic.",
+        "answerText": "Funny, light-hearted, and charismatic.",
+        "result": "Dragon",
         "question_id": 4
     }
 ]
