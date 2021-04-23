@@ -6,53 +6,6 @@ import API from '../utils/API';
 const Quiz = () => {
   let { id } = useParams()
   const [questions, setQuestions] = useState([]);
-  const exampleQuestions = [
-    {
-      questionText: "What is your ideal vacation?",
-      answers: [
-        { answerText: "Coney Island and a slice", result: "dorothy" },
-        { answerText: "A tour of the fjords of Norway", result: "rose" },
-        { answerText: "A riverboat cruise of Savannah GA", result: "blanche" },
-        { answerText: "A Sicillian knife fight", result: "sophia" }
-      ]
-    },
-    {
-      questionText: "How do you prefer to dress?",
-      answers: [
-        { answerText: "Shoulder pads on shoulder pads", result: "dorothy" },
-        { answerText: "Tasteful sweats for keeping on the move", result: "rose" },
-        { answerText: "Anything with sequins and a low cut", result: "blanche" },
-        { answerText: "House  coat and slippers regardless of the occasion", result: "sophia" }
-      ]
-    },
-    {
-      questionText: "Who is you ideal partner?",
-      answers: [
-        { answerText: "Someone who will both challenge me and respect me", result: "dorothy" },
-        { answerText: "Someone who will love me unconditionaly, despite my flaws", result: "rose" },
-        { answerText: "No way i'm locking it down to one", result: "blanche" },
-        { answerText: "At my age, a pulse is all you ask for", result: "sophia" }
-      ]
-    },
-    {
-      questionText: "What is your ideal vacation?",
-      answers: [
-        { answerText: "Coney Island and a slice", result: "dorothy" },
-        { answerText: "A tour of the fjords of Norway", result: "rose" },
-        { answerText: "A riverboat cruise of Savannah GA", result: "blanche" },
-        { answerText: "A Sicillian knife fight", result: "sophia" }
-      ]
-    },
-    {
-      questionText: "What is your ideal vacation?",
-      answers: [
-        { answerText: "Coney Island and a slice", result: 'dorothy' },
-        { answerText: "A tour of the fjords of Norway", result: "rose" },
-        { answerText: "A riverboat cruise of Savannah GA", result: "blanche" },
-        { answerText: "A Sicillian knife fight", result: "sophia" }
-      ]
-    }
-  ];
 
   const [quizResults, setQuizResults] = useState([]);
 
@@ -65,10 +18,8 @@ const Quiz = () => {
 
   useEffect(() => {
     console.log("primary key of quiz:", id);
-    //some API call to get quiz
     API.getQuiz(id)
-    .then(results => console.log(results.data))
-    setQuestions(exampleQuestions);
+    .then(results => setQuestions(results.data.questions))
   }, [id]);
   
   useEffect(() => {
@@ -80,9 +31,8 @@ const Quiz = () => {
   }, [finalResult])
 
   const tallyResult = (answerzArr) => {
-    let maxCount = 1;
+    let maxCount = 0;
     let currentCount = 1;
-
     let winner;
     answerzArr.sort();
     console.log(answerzArr)
@@ -100,7 +50,6 @@ const Quiz = () => {
       if (i === answerzArr.length && currentCount > maxCount) {
         maxCount = currentCount;
         winner = answerzArr[i - 1]
-        console.log("success")
       }
       setFinalResult(winner);
     }
