@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 import { FaArrowLeft } from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa';
-
-
 
 function About () {
 
@@ -34,13 +33,18 @@ function About () {
     return (
         <>
         <section>
-        <div className="logo">Logo</div>
         <div className="info">{info[currentInfo]}</div>
         <div className="arrowButtons">
-        <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft /></button>
-        <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button>
+        { info[0] ? (
+            <>
+            <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft /></button>
+            <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button>
+            </>
+            ) : (
+            <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button> 
+        )}
         </div>
-        <div className="sample"><button className="sampleButton">Sample Quiz</button></div>
+        <div className="sample"><Link to="/quiz/1" className="sampleButton">Sample Quiz</Link></div>
         </section>
         </>
     )

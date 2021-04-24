@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import API from '../utils/API';
+import { Jumbotron, ListGroup } from 'react-bootstrap';
+import Bubbles from '../components/Bubbles';
 
 const Quiz = () => {
   let { id } = useParams()
@@ -78,21 +80,26 @@ const Quiz = () => {
         questions.length ? (
           <div className="quiz">
             {showResult ? (
-              <div className="resultReveal">{finalResult}</div>
+              <div className="resultReveal">
+                <Bubbles/>
+                <Jumbotron>{finalResult}</Jumbotron>
+                </div>
             ) : (
               <>
+              <Jumbotron>
                 <div className="qustion-number">
-                  <div>Question {currentQuestion + 1}/{questions.length}</div>
+                  <div >Question {currentQuestion + 1}/{questions.length}</div>
                 </div>
                 <div className="questionText">{questions[currentQuestion].questionText}</div>
-                <div className="answer-options">
+              </Jumbotron>
+                <ListGroup className="answer-options">
                   {questions[currentQuestion].answers.map(answerOption =>
-                    <button key={answerOption.result}
+                    <button className="list-group-item list-group-item-action" key={answerOption.result}
                       onClick={() => handleAnswerButtonClick(answerOption.result)}>
                       {answerOption.answerText}
                     </button>
                   )}
-                </div>
+                </ListGroup>
               </>
             )}
           </div>) : (
