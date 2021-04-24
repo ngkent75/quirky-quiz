@@ -1,7 +1,10 @@
-import {get} from 'axios';
+import axios from 'axios';
 
 const API = {
-  getQuiz: (id) => get('/api/quiz/' + id )
+  getQuiz: (id) => axios.get('/api/quiz/' + id ),
+  saveQuiz: function(quizData) {
+    return axios.post('/api/quiz', quizData);
+  }
 }
 
 export default API;
