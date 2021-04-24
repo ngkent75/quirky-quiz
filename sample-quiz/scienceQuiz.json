@@ -1,0 +1,50 @@
+{
+    "title": "Which Planet are You?",
+    "questions": [
+      {
+        "questionText": "Who is your favorite superhero?",
+        "answers": [
+          {"answerText": "Spider-Man", "result": "Neptune"},
+          {"answerText": "Black Panther", "result": "Saturn"},
+          {"answerText": "Elastigirl", "result": "Jupiter"},
+          {"answerText": "Deadpool", "result": "Uranus"}
+        ]
+      },
+      {
+        "questionText": "Pick a color:",
+        "answers": [
+          {"answerText": "Blue", "result": "Neptune"},
+          {"answerText": "Yellow", "result": "Saturn"},
+          {"answerText": "How could I pick just one?", "result": "Jupiter"},
+          {"answerText": "Green", "result": "Uranus"}
+        ]
+      },
+      {
+        "questionText": "If you were a Kardashian, who would you be?",
+        "answers": [
+          {"answerText": "Kim", "result": "Neptune"},
+          {"answerText": "Khloe", "result": "Saturn"},
+          {"answerText": "Rob", "result": "Jupiter"},
+          {"answerText": "Kourtney", "result": "Uranus"}
+        ]
+      },
+      {
+        "questionText": "What is the strongest muscle in the human body?",
+        "answers": [
+          {"answerText": "Heart", "result": "Neptune"},
+          {"answerText": "Masseter", "result": "Saturn"},
+          {"answerText": "soleus", "result": "Jupiter"},
+          {"answerText": "Gluteus Maximus", "result": "Uranus"}
+        ]
+      },
+      {
+        "questionText": "What is your favorite way to eat a potato?",
+        "answers": [
+          {"answerText": "Mashed", "result": "Neptune"},
+          {"answerText": "Baked", "result": "Saturn"},
+          {"answerText": "French Fries", "result": "Jupiter"},
+          {"answerText": "Scalloped", "result": "Uranus"}
+        ]
+      }
+    ]
+  }

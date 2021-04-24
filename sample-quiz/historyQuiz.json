@@ -1,0 +1,50 @@
+{
+    "title": "Which US President are you?",
+    "questions": [
+      {
+        "questionText": "What would you rather have?",
+        "answers": [
+          {"answerText": "Money", "result": "John F. Kennedy"},
+          {"answerText": "Fame", "result": "Barack Obama"},
+          {"answerText": "Power", "result": "George Washington"},
+          {"answerText": "The ability to walk on water", "result": "Ulysses S. Grant"}
+        ]
+      },
+      {
+        "questionText": "Favorite Genre of Music?",
+        "answers": [
+          {"answerText": "Country", "result": "John F. Kennedy"},
+          {"answerText": "Heavy Metal", "result": "Barack Obama"},
+          {"answerText": "Classical", "result": "George Washington"},
+          {"answerText": "Rap", "result": "Ulysses S. Grant"}
+        ]
+      },
+      {
+        "questionText": "How many children would you like?",
+        "answers": [
+          {"answerText": "3", "result": "John F. Kennedy"},
+          {"answerText": "2", "result": "Barack Obama"},
+          {"answerText": "0", "result": "George Washington"},
+          {"answerText": "9", "result": "Ulysses S. Grant"}
+        ]
+      },
+      {
+        "questionText": "What is your favorite animal?",
+        "answers": [
+          {"answerText": "Frog", "result": "John F. Kennedy"},
+          {"answerText": "Dog", "result": "Barack Obama"},
+          {"answerText": "Cat", "result": "George Washington"},
+          {"answerText": "Saber-toothed Tiger", "result": "Ulysses S. Grant"}
+        ]
+      },
+      {
+        "questionText": "Which fruit should be illegal?",
+        "answers": [
+          {"answerText": "Strawberries", "result": "John F. Kennedy"},
+          {"answerText": "Tomatoes", "result": "Barack Obama"},
+          {"answerText": "Apples", "result": "George Washington"},
+          {"answerText": "Bananas", "result": "Ulysses S. Grant"}
+        ]
+      }
+    ]
+  }
