@@ -35,7 +35,7 @@ function About () {
         <section>
         <div className="info">{info[currentInfo]}</div>
         <div className="arrowButtons">
-        { info[0] ? (
+        { currentInfo !== 0 ? (
             <>
             <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft /></button>
             <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button>
