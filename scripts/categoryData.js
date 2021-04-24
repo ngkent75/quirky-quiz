@@ -18,10 +18,7 @@ const categoryData = [
     },
     {
         "category": "History"
-    },
-    {
-        "category": "Other"
-    },
+    }    
 ]
 
 const seedCategory = () => Category.bulkCreate(categoryData);
