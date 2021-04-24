@@ -1,9 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
-import {
-  SET_CURRENT_POST,
-  ADD_POST,
-  LOADING
-} from "./actions";
+import { SET_CURRENT_POST, ADD_POST, LOADING, ADD_USER } from "./actions";
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -14,18 +10,24 @@ const reducer = (state, action) => {
       return {
         ...state,
         currentPost: action.post,
-        loading: false
+        loading: false,
       };
     case ADD_POST:
       return {
         ...state,
         posts: [action.post, ...state.posts],
-        loading: false
+        loading: false,
       };
     case LOADING:
       return {
         ...state,
-        loading: true
+        loading: true,
+      };
+    case ADD_USER:
+      return {
+        ...state,
+        users: [action.user, ...state.users],
+        loading: false,
       };
     default:
       return state;
@@ -35,7 +37,8 @@ const reducer = (state, action) => {
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     posts: [],
-    loading: false    
+    users: [],
+    loading: false,
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
@@ -45,4 +48,4 @@ const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
-export { StoreProvider, useStoreContext }
+export { StoreProvider, useStoreContext };
