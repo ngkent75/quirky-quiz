@@ -44,7 +44,7 @@ function About () {
             <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight size="32px"/></button> 
         )}
         </div>
-        <div className="sample"><Link to="/quiz/1" className="sampleButton">Sample Quiz</Link></div>
+        <div className="sample"><Link to="/quiz/5" className="sampleButton">Sample Quiz</Link></div>
         </section>
         </>
     )
