@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Bubbles from '../components/Bubbles';
 import '../App.css';
@@ -26,8 +26,8 @@ function Homepage () {
                                 <Card.Text>
                                     The various classifications of art include: fine art, visual art, plastic art, performance art, applied art and decorative art.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}} 
-                                variant="outline-primary">Art Category</Link>
+                                <Link to={{pathname: '/quiz/1'}}>
+                                    <Button variant="outline-primary">Art Category </Button> </Link>
                             </Card.Body>
                         </Card>
                     </div>
@@ -39,8 +39,8 @@ function Homepage () {
                                 <Card.Text>
                                     Science is the pursuit and application of knowledge and understanding of the natural and social world.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}} 
-                                variant="outline-info">Science Category</Link>
+                                <Link to={{pathname: '/quiz/1'}}> 
+                                <Button variant="outline-info">Science Category </Button> </Link>
                             </Card.Body>
                         </Card>
                     </div>
@@ -52,8 +52,8 @@ function Homepage () {
                                 <Card.Text>
                                     The different types of sports categories include: individual sports, partner sports, team sports, and extreme sports.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}} 
-                                variant="outline-success">Sports Category</Link>
+                                <Link to={{pathname: '/quiz/1'}}> 
+                                <Button variant="outline-success">Sports Category </Button> </Link>
                             </Card.Body>
                         </Card>
                     </div>
@@ -67,8 +67,8 @@ function Homepage () {
                                 <Card.Text>
                                     The types of entertainment include: movies, tv shows, books, video games, and music.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}}  
-                                variant="outline-warning">Entertainment Category</Link>
+                                <Link to={{pathname: '/quiz/1'}}> 
+                                <Button variant="outline-warning">Entertainment Category </Button> </Link>
                             </Card.Body>
                         </Card>
                     </div>
@@ -80,8 +80,8 @@ function Homepage () {
                                 <Card.Text>
                                     Geography is the study of places and the relationships between people and their environments.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}} 
-                                variant="outline-danger">Geography Category</Link>
+                                <Link to={{pathname: '/quiz/1'}}> 
+                                <Button variant="outline-danger">Geography Category </Button> </Link>
                             </Card.Body>
                         </Card>
                     </div>
@@ -93,8 +93,8 @@ function Homepage () {
                                 <Card.Text>
                                     History is the study of people, actions, decisions, interactions and behaviours.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}} 
-                                variant="outline-dark">History Category</Link>
+                                <Link to={{pathname: '/quiz/1'}}> 
+                                <Button variant="outline-dark">History Category </Button> </Link>
                             </Card.Body>
                         </Card>
                     </div>
