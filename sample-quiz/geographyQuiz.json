@@ -1,0 +1,50 @@
+{
+    "title": "The foods you Choose will reveal which US State you should live in:",
+    "questions": [
+      {
+        "questionText": "Choose your breakfast:",
+        "answers": [
+          {"answerText": "Biscuits and Gravy", "result": "Georgia"},
+          {"answerText": "Breakfast Burrito", "result": "Texas"},
+          {"answerText": "Bacon and Eggs", "result": "Florida"},
+          {"answerText": "A Green Juice", "result": "California"}
+        ]
+      },
+      {
+        "questionText": "Choose your lunch:",
+        "answers": [
+          {"answerText": "Mac and Cheese", "result": "Georgia"},
+          {"answerText": "Pulled Pork Sandwich", "result": "Texas"},
+          {"answerText": "Grilled Chicken", "result": "Florida"},
+          {"answerText": "Quinoa Salad with Shaved-Egg Avocado Toast", "result": "California"}
+        ]
+      },
+      {
+        "questionText": "Choose a snack:",
+        "answers": [
+          {"answerText": "Peaches", "result": "Georgia"},
+          {"answerText": "Popcorn", "result": "Texas"},
+          {"answerText": "Mixed Nuts", "result": "Florida"},
+          {"answerText": "Kale Chips", "result": "California"}
+        ]
+      },
+      {
+        "questionText": "Choose your dinner:",
+        "answers": [
+          {"answerText": "French Bread Pizza", "result": "Georgia"},
+          {"answerText": "Ramen", "result": "Texas"},
+          {"answerText": "Black Bean Sweet Potatoes", "result": "Florida"},
+          {"answerText": "Vegan Chickpea Shakshuka", "result": "California"}
+        ]
+      },
+      {
+        "questionText": "Finally, Choose your dessert:",
+        "answers": [
+          {"answerText": "Chocolate Chip Cookie", "result": "Georgia"},
+          {"answerText": "Apple Pie", "result": "Texas"},
+          {"answerText": "Vanilla Bean Icecream", "result": "Florida"},
+          {"answerText": "Banana Nice-cream", "result": "California"}
+        ]
+      }
+    ]
+  }

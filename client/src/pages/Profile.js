@@ -1,5 +1,6 @@
 // import useToken from '../utils/useToken';
 // import Login from '../components/Login/Login';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import { Card, Button } from 'react-bootstrap';
 import Footer from '../components/Footer';
@@ -18,17 +19,17 @@ const Profile = () => {
             <Navigation />
             <Particle />
             <h1>User's Profile</h1>
-            <div className='container' align='center'>
+            <div className='container-fluid' align='center'>
                 <div className='row'>
                     <div className='col-6'>
                         <Card style={{ width: '18rem' }} align='center'>
-                            <Card.Img variant="top" src="./assets/create-quiz.jpg" height='175px'/>
+                            <Card.Img variant="top" src="./assets/comingSoon.jpeg" height='175px'/>
                             <Card.Body>
                                 <Card.Title>Create a New Quiz</Card.Title>
                                 <Card.Text>
                                 Have an idea for a fun new quiz you'd like fellow users to take? Create your own quiz today!
                                 </Card.Text>
-                                <Button variant="primary">Click to Create</Button>
+                                <Button variant="primary">COMING SOON</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -42,7 +43,8 @@ const Profile = () => {
                             the card's content.
                             </Card.Text>
                             <div className=" row d-flex justify-content-around">
-                            <Button variant="danger">Random Quiz </Button> <Button variant="warning">Choose a Quiz </Button>
+                            {/* <Button variant="danger">Random Quiz </Button>  */}
+                            <Link to={{pathname: '/home'}}><Button variant="warning">Choose a Quiz </Button> </Link>
                             </div>
                         </Card.Body>
                         </Card>
