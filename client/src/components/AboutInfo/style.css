@@ -5,6 +5,9 @@ section {
   padding: 12px
 }
 
+.infoField {
+  background-color: #ffffffd9;
+}
 
 .info {
   font-size: 48px;
@@ -32,6 +35,13 @@ section {
   border-radius: 6px;
   border-style: solid;
   padding: 8px;
+  text-decoration: none;
+}
+
+.sampleButton:hover {
+  text-decoration: none;
+  background-color:  #1575fc;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {
