@@ -1,0 +1,50 @@
+{
+    "title": "Which Professional Sports Team are You?",
+    "questions": [
+      {
+        "questionText": "What is your ideal vacation?",
+        "answers": [
+          {"answerText": "Football", "result": "Carolina Panthers"},
+          {"answerText": "Hockey", "result": "Arizona Coyotes"},
+          {"answerText": "Soccer", "result": "Manchester United"},
+          {"answerText": "Baseball", "result": "Chicago Cubs"}
+        ]
+      },
+      {
+        "questionText": "What is your favorite shape?",
+        "answers": [
+          {"answerText": "Diamond", "result": "Carolina Panthers"},
+          {"answerText": "Triangle", "result": "Arizona Coyotes"},
+          {"answerText": "Square", "result": "Manchester United"},
+          {"answerText": "Circle", "result": "Chicago Cubs"}
+        ]
+      },
+      {
+        "questionText": "What is the total distance of a marathon?",
+        "answers": [
+          {"answerText": "21.2 miles", "result": "Carolina Panthers"},
+          {"answerText": "22.1 miles", "result": "Arizona Coyotes"},
+          {"answerText": "26.2 miles", "result": "Manchester United"},
+          {"answerText": "22.6 miles", "result": "Chicago Cubs"}
+        ]
+      },
+      {
+        "questionText": "What city hosts the Little League World series?",
+        "answers": [
+          {"answerText": "Atlanta, GA", "result": "Carolina Panthers"},
+          {"answerText": "Santa Cruz, CA", "result": "Arizona Coyotes"},
+          {"answerText": "Kansas City, MO", "result": "Manchester United"},
+          {"answerText": "South Williamsport, PA", "result": "Chicago Cubs"}
+        ]
+      },
+      {
+        "questionText": "Which sport is dubbed the 'king of sports'?",
+        "answers": [
+          {"answerText": "Football", "result": "Carolina Panthers"},
+          {"answerText": "Hockey", "result": "Arizona Coyotes"},
+          {"answerText": "Soccer", "result": "Manchester United"},
+          {"answerText": "Baseball", "result": "Chicago Cubs"}
+        ]
+      }
+    ]
+  }

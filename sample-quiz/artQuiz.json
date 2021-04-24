@@ -1,0 +1,50 @@
+{
+    "title": "Which Famous Artist Are You?",
+    "questions": [
+      {
+        "questionText": "What is your favorite exercise?",
+        "answers": [
+          {"answerText": "Running", "result": "Vincent van Gogh"},
+          {"answerText": "Cycling", "result": "Pablo Picaso"},
+          {"answerText": "Kickboxing", "result": "Leonardo da Vinci"},
+          {"answerText": "I don't exercise, ever", "result": "Michelangelo"}
+        ]
+      },
+      {
+        "questionText": "What does IPA stand for?",
+        "answers": [
+          {"answerText": "International Pancake Association", "result": "Vincent van Gogh"},
+          {"answerText": "Inquirer Peoples Anthology", "result": "Pablo Picaso"},
+          {"answerText": "India Pale Ale", "result": "Leonardo da Vinci"},
+          {"answerText": "Indiana Port Alchemy", "result": "Michelangelo"}
+        ]
+      },
+      {
+        "questionText": "If you had to make a dating profile, what site would you use?",
+        "answers": [
+          {"answerText": "Bumble", "result": "Vincent van Gogh"},
+          {"answerText": "Tinder", "result": "Pablo Picaso"},
+          {"answerText": "Christian Mingle", "result": "Leonardo da Vinci"},
+          {"answerText": "CuPets", "result": "Michelangelo"}
+        ]
+      },
+      {
+        "questionText": "Choose a food you eat the most:",
+        "answers": [
+          {"answerText": "French Fries", "result": "Vincent van Gogh"},
+          {"answerText": "Pizza", "result": "Pablo Picaso"},
+          {"answerText": "Tacos", "result": "Leonardo da Vinci"},
+          {"answerText": "Grapefruit", "result": "Michelangelo"}
+        ]
+      },
+      {
+        "questionText": "Which part of your body could you live without?",
+        "answers": [
+          {"answerText": "Ears", "result": "Vincent van Gogh"},
+          {"answerText": "Eyes", "result": "Pablo Picaso"},
+          {"answerText": "I would very much like to keep all my body parts", "result": "Leonardo da Vinci"},
+          {"answerText": "Mouth", "result": "Michelangelo"}
+        ]
+      }
+    ]
+  }
