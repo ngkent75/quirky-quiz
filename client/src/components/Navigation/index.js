@@ -10,9 +10,9 @@ function Navigation() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto !important">
-                <NavLink to="/home">Home</NavLink>
-                <NavLink to="/profile">Profile</NavLink>
-                <NavLink to="/about">About</NavLink>
+                <NavLink className="nav-button" to="/home">Home</NavLink>
+                <NavLink className="nav-button" to="/profile">Profile</NavLink>
+                <NavLink className="nav-button" to="/about">About</NavLink>
                 </Nav>
                 <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
