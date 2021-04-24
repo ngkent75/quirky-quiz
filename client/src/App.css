@@ -39,23 +39,21 @@
 
 /* Media Queries */
 @media screen and (max-width: 726px) {
-  .container {
+  .row {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 4px;
-    justify-items: center;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
   }
 } 
 
 @media screen and (max-width: 526px) {
-  .container {
+  .row {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: 8px;
-    justify-items: center;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }

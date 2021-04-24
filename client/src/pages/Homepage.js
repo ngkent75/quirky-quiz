@@ -19,7 +19,7 @@ function Homepage () {
             <div className='container-fluid' align='center'>
                 <div className='row'>
                     <div className='col-4 md-auto'>
-                        <Card className='justify-content-center'>
+                        <Card style={{ width: '18rem'}} >
                             <Card.Img variant="top" src="./assets/art-category.jpeg" height='175px'/>
                             <Card.Body>
                                 <Card.Title>Art</Card.Title>
@@ -32,7 +32,7 @@ function Homepage () {
                         </Card>
                     </div>
                     <div className='col-4 md-auto'>
-                        <Card className='justify-content-center'>
+                        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src="./assets/science-category.png" height='175px'/>
                             <Card.Body>
                                 <Card.Title>Science</Card.Title>
@@ -45,7 +45,7 @@ function Homepage () {
                         </Card>
                     </div>
                     <div className='col-4 md-auto'>
-                        <Card className='justify-content-center'>
+                        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src="./assets/sports-category.jpg" height='175px'/>
                             <Card.Body>
                                 <Card.Title>Sports</Card.Title>
@@ -60,7 +60,7 @@ function Homepage () {
                 </div>
                 <div className='row'>
                     <div className='col-4 md-auto'>
-                        <Card className='justify-content-center'>
+                        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src="./assets/entertainment-category.jpg" height='175px'/>
                             <Card.Body>
                                 <Card.Title>Entertainment</Card.Title>
@@ -73,7 +73,7 @@ function Homepage () {
                         </Card>
                     </div>
                     <div className='col-4 md-auto'>
-                        <Card className='justify-content-center'>
+                        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src="./assets/geography-category.jpeg" height='175px'/>
                             <Card.Body>
                                 <Card.Title>Geography</Card.Title>
@@ -86,7 +86,7 @@ function Homepage () {
                         </Card>
                     </div>
                     <div className='col-4 md-auto'>
-                        <Card className='justify-content-center'>
+                        <Card style={{ width: '18rem' }}>
                             <Card.Img variant="top" src="./assets/history-category.jpeg" height='175px'/>
                             <Card.Body>
                                 <Card.Title>History</Card.Title>
