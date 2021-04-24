@@ -75,6 +75,7 @@ const Quiz = () => {
 
   return (
     <>
+      <Bubbles />
       <Navigation />
       {
         questions.length ? (
