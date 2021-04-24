@@ -26,10 +26,7 @@ function Homepage () {
                                 <Card.Text>
                                     The various classifications of art include: fine art, visual art, plastic art, performance art, applied art and decorative art.
                                 </Card.Text>
-                                <Link to={{
-                                    pathname: '/quizlanding',
-                                    state: { category: 1 }
-                                }} 
+                                <Link to={{pathname: '/quiz/1'}} 
                                 variant="outline-primary">Art Category</Link>
                             </Card.Body>
                         </Card>
@@ -42,10 +39,7 @@ function Homepage () {
                                 <Card.Text>
                                     Science is the pursuit and application of knowledge and understanding of the natural and social world.
                                 </Card.Text>
-                                <Link to={{
-                                    pathname: '/quizlanding',
-                                    state: { category: 2 }
-                                }} 
+                                <Link to={{pathname: '/quiz/1'}} 
                                 variant="outline-info">Science Category</Link>
                             </Card.Body>
                         </Card>
@@ -58,10 +52,7 @@ function Homepage () {
                                 <Card.Text>
                                     The different types of sports categories include: individual sports, partner sports, team sports, and extreme sports.
                                 </Card.Text>
-                                <Link to={{
-                                    pathname: '/quizlanding',
-                                    state: { category: 3 }
-                                }} 
+                                <Link to={{pathname: '/quiz/1'}} 
                                 variant="outline-success">Sports Category</Link>
                             </Card.Body>
                         </Card>
@@ -76,10 +67,7 @@ function Homepage () {
                                 <Card.Text>
                                     The types of entertainment include: movies, tv shows, books, video games, and music.
                                 </Card.Text>
-                                <Link to={{
-                                    pathname: '/quizlanding',
-                                    state: { category: 4 }
-                                }} 
+                                <Link to={{pathname: '/quiz/1'}}  
                                 variant="outline-warning">Entertainment Category</Link>
                             </Card.Body>
                         </Card>
@@ -92,10 +80,7 @@ function Homepage () {
                                 <Card.Text>
                                     Geography is the study of places and the relationships between people and their environments.
                                 </Card.Text>
-                                <Link to={{
-                                    pathname: '/quizlanding',
-                                    state: { category: 5 }
-                                }} 
+                                <Link to={{pathname: '/quiz/1'}} 
                                 variant="outline-danger">Geography Category</Link>
                             </Card.Body>
                         </Card>
@@ -108,10 +93,7 @@ function Homepage () {
                                 <Card.Text>
                                     History is the study of people, actions, decisions, interactions and behaviours.
                                 </Card.Text>
-                                <Link to={{
-                                    pathname: '/quizlanding',
-                                    state: { category: 6 }
-                                }} 
+                                <Link to={{pathname: '/quiz/1'}} 
                                 variant="outline-dark">History Category</Link>
                             </Card.Body>
                         </Card>
