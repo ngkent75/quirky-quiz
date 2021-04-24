@@ -32,16 +32,16 @@ function About () {
     }
     return (
         <>
-        <section>
+        <section className="infoField">
         <div className="info">{info[currentInfo]}</div>
         <div className="arrowButtons">
         { currentInfo !== 0 ? (
             <>
-            <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft /></button>
-            <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button>
+            <button className="forwardArrow" onClick={handleBackwardButtonClick}><FaArrowLeft size="32px"/></button>
+            <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight size="32px"/></button>
             </>
             ) : (
-            <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight /></button> 
+            <button className="backwardArrow" onClick={handleForwardButtonClick}><FaArrowRight size="32px"/></button> 
         )}
         </div>
         <div className="sample"><Link to="/quiz/1" className="sampleButton">Sample Quiz</Link></div>

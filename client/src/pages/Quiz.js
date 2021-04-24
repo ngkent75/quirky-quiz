@@ -2,26 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import API from '../utils/API';
-import { Jumbotron, ListGroup } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import Bubbles from '../components/Bubbles';
 
 const Quiz = () => {
   let { id } = useParams()
   const [questions, setQuestions] = useState([]);
-
   const [quizResults, setQuizResults] = useState([]);
-
   const [finalResult, setFinalResult] = useState('')
-
   const [showResult, setShowResult] = useState(false);
-
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);;
+  const [currentQuiz, setCurrentQuiz] = useState('');
 
 
   useEffect(() => {
     console.log("primary key of quiz:", id);
     API.getQuiz(id)
-    .then(results => setQuestions(results.data.questions))
+    .then(results => {
+      setQuestions(results.data.questions)
+      setCurrentQuiz(results.data.title)
+    })
   }, [id]);
   
   useEffect(() => {
@@ -82,16 +82,19 @@ const Quiz = () => {
             {showResult ? (
               <div className="resultReveal">
                 <Bubbles/>
-                <Jumbotron>{finalResult}</Jumbotron>
+                <div className="result-prompt">You are most definitely a:</div>
+                <div className="final-result">{finalResult}</div>
+                <button className="save-button">Save Result</button>
                 </div>
             ) : (
               <>
-              <Jumbotron>
+              <section className="questionField">
+                <div className="quiz-title">{currentQuiz}</div>
                 <div className="qustion-number">
                   <div >Question {currentQuestion + 1}/{questions.length}</div>
                 </div>
                 <div className="questionText">{questions[currentQuestion].questionText}</div>
-              </Jumbotron>
+              </section>
                 <ListGroup className="answer-options">
                   {questions[currentQuestion].answers.map(answerOption =>
                     <button className="list-group-item list-group-item-action" key={answerOption.result}
