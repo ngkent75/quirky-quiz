@@ -1,28 +1,33 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useRef } from "react";
+// import PropTypes from "prop-types";
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_USER, LOADING } from "../../utils/actions";
+import API from "../../utils/API";
+
 import "./style.css";
 
-async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(credentials),
-  }).then((data) => data.json());
-}
-
-export default function Login({ setToken }) {
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+function LoginUser() {
+  const usernameRef = useRef();
+  const passwordRef = useRef();
+  const [state, dispatch] = useStoreContext;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const token = await loginUser({
-      username,
-      password,
-    });
-    setToken(token);
+    dispatch({ type: LOADING });
+    API.saveUser({
+      username: usernameRef.current.value,
+      password: passwordRef.current.value,
+    })
+      .then((result) => {
+        dispatch({
+          type: ADD_USER,
+          post: result.data,
+        });
+      })
+      .catch((err) => console.log(err));
+
+    usernameRef.current.value = "";
+    passwordRef.current.value = "";
   };
   return (
     <div className="container justify-content-center w-50 align-self-center ">
@@ -34,8 +39,8 @@ export default function Login({ setToken }) {
             className="form-control mb-2"
             name="username"
             placeholder="Username"
-            required=""
-            onChange={(event) => setUserName(event.target.value)}
+            required
+            ref={usernameRef}
           />
 
           <input
@@ -43,21 +48,24 @@ export default function Login({ setToken }) {
             className="form-control mb-4"
             name="password"
             placeholder="Password"
-            required=""
-            onChange={(event) => setPassword(event.target.value)}
+            required
+            ref={passwordRef}
           />
 
-          <button className="btn btn-lg btn-primary btn-block" type="submit">
+          <button
+            className="btn btn-lg btn-primary btn-block"
+            type="submit"
+            disabled={state.loading}
+          >
             Login
           </button>
           <p className="text-right mt-2">
-            Dont have an account?<a href="/Signup">Sign Up</a>
+            Dont have an account?<a href="/register">Sign Up</a>
           </p>
         </form>
       </div>
     </div>
   );
 }
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
-};
+
+export default LoginUser;
