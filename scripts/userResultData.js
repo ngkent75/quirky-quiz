@@ -3,11 +3,13 @@ const { UserResult } = require('../models');
 const userResultData = [
     {
         "user_id": 2,
-        "result": "Shrek"
+        "result": "Shrek",
+        "quiz_title": "What Shrek character are you?"
     },
     {
         "user_id": 2,
-        "result": "Dragon" 
+        "result": "Dragon" ,
+        "quiz_title": "What Shrek character are you?"
     },
 ]
 

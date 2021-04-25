@@ -73,6 +73,15 @@ const Quiz = () => {
     setShowResult(true)
   };
 
+  const handleSaveButtonClick = () => {
+    const resultData = {
+      user_id: '',
+      result: finalResult,
+      quiz_title: currentQuiz
+    }
+    API.saveResult(resultData);
+  }
+
   return (
     <>
       <Bubbles />
@@ -85,7 +94,8 @@ const Quiz = () => {
                 <Bubbles/>
                 <div className="result-prompt">You are most definitely a:</div>
                 <div className="final-result">{finalResult}</div>
-                <button className="save-button">Save Result</button>
+                <button className="save-button" 
+                  onClick={() => handleSaveButtonClick()}>Save Result</button>
                 </div>
             ) : (
               <>
