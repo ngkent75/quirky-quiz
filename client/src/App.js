@@ -25,6 +25,7 @@ function App() {
             <Route exact path="/quiz/:id" component={Quiz} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/register" component={SignUpPage} />
+            {/* Test route for login */}
             <Route exact path="/loginTest" component={CreateSignUpForm} />
           </StoreProvider>
         </Container>
