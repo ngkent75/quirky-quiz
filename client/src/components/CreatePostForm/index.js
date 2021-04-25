@@ -7,7 +7,7 @@ function CreatePostForm() {
   const titleRef = useRef();
   const questionRef = useRef();
   const answerRef = useRef();
-  const [state, dispatch] = useStoreContext;;
+  const [state, dispatch] = useStoreContext;
 
   const handleSubmit = e => {
     e.preventDefault();

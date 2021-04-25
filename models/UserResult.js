@@ -14,7 +14,7 @@ UserResult.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'users',
                 key: 'id',
             },
         },
@@ -26,7 +26,7 @@ UserResult.init(
     {
         sequelize,
         timestamps: false,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
         modelName: 'user_result'
     }

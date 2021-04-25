@@ -12,7 +12,7 @@ Question.init(
         quiz_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'quiz',
+                model: 'quizzes',
                 key: 'id',
             },
         },
@@ -20,7 +20,7 @@ Question.init(
     {
         sequelize,
         timestamps: false,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
         modelName: 'question'
     }

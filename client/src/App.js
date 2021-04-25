@@ -9,19 +9,24 @@ import "./App.css";
 import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import CreateSignUpForm from "./components/CreateSignUpForm";
+import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
   return (
     <div>
       <Router>
         <Container>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/home" component={Homepage} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/quiz/:id" component={Quiz} />
-          <Route exact path="/login" component={LoginPage} />
-          <Route exact path="/register" component={SignUpPage} />
+          <StoreProvider>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/home" component={Homepage} />
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/quiz/:id" component={Quiz} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/register" component={SignUpPage} />
+            <Route exact path="/loginTest" component={CreateSignUpForm} />
+          </StoreProvider>
         </Container>
       </Router>
     </div>
