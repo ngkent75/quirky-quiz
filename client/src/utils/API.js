@@ -8,6 +8,7 @@ const API = {
   saveUser: function(quizData) {
     return axios.post('/api/user', quizData);
   },
+  getUser: id => axios.get('/api/user/' + id)
 }
 
 export default API;
