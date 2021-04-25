@@ -9,6 +9,9 @@ class Signup extends Component {
       password: "",
     };
   }
+
+
+  
   // handleSubmit =  async event => {
   //     this.setState({
   //         [event.target.name]

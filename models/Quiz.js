@@ -12,14 +12,14 @@ Quiz.init(
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'users',
                 key: 'id',
             },
         },
     },
     {
         sequelize,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
         modelName: 'quiz',
     },

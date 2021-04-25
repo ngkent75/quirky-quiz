@@ -2,6 +2,7 @@ import React, { createContext, useReducer, useContext } from "react";
 import {
   SET_CURRENT_POST,
   ADD_POST,
+  ADD_USER,
   LOADING
 } from "./actions";
 
@@ -19,7 +20,13 @@ const reducer = (state, action) => {
     case ADD_POST:
       return {
         ...state,
-        posts: [action.post, ...state.posts],
+        post: [action.post, ...state.posts],
+        loading: false
+      };
+    case ADD_USER:
+      return {
+        ...state,
+        users: [action.user, ...state.users],
         loading: false
       };
     case LOADING:
@@ -35,7 +42,8 @@ const reducer = (state, action) => {
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     posts: [],
-    loading: false    
+    users: [],
+    loading: false
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
