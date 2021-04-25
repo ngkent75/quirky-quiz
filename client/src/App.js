@@ -10,6 +10,7 @@ import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import CreateSignUpForm from "./components/CreateSignUpForm";
+import CategoryPage from "./pages/CategoryPage"
 import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
