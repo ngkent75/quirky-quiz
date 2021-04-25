@@ -15,14 +15,14 @@ QuizCategory.init(
         quiz_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'quiz',
+                model: 'quizzes',
                 key: 'id',
             },
         },
         category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'category',
+                model: 'categories',
                 key: 'id',
             },
         },
@@ -30,7 +30,7 @@ QuizCategory.init(
     {
         sequelize,
         timestamps: false,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
         modelName: 'quiz_category',
     },

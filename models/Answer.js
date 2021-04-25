@@ -16,14 +16,14 @@ Answer.init(
         question_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'question',
+                model: 'questions',
                 key: 'id',
             },
         },
     },
     {
         sequelize,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
         modelName: 'answer'
     },

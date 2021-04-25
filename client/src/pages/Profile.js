@@ -21,7 +21,7 @@ const Profile = () => {
             <h1>User's Profile</h1>
             <div className='container-fluid' align='center'>
                 <div className='row'>
-                    <div className='col-6'>
+                    <div className='col-6 profile-card'>
                         <Card style={{ width: '18rem' }} align='center'>
                             <Card.Img variant="top" src="./assets/comingSoon.jpeg" height='175px'/>
                             <Card.Body>
@@ -33,7 +33,7 @@ const Profile = () => {
                             </Card.Body>
                         </Card>
                     </div>
-                    <div className='col-6'>
+                    <div className='col-6 profile-card'>
                         <Card style={{ width: '18rem' }} align='center'>
                         <Card.Img variant="top" src="./assets/take-quiz.jpeg" height='175px'/>
                         <Card.Body>
@@ -49,7 +49,7 @@ const Profile = () => {
                         </Card.Body>
                         </Card>
                     </div>
-                    <div className='col-6'>
+                    <div className='col-6 profile-card'>
                         <Card style={{ width: '18rem' }} align='center'>
                         <Card.Img variant="top" src="./assets/past-results.jpeg" height='175px'/>
                         <Card.Body>
@@ -61,7 +61,7 @@ const Profile = () => {
                         </Card.Body>
                         </Card>
                     </div>
-                    <div className='col-6'>
+                    <div className='col-6 profile-card'>
                         <Card style={{ width: '18rem' }} align='center'>
                         <Card.Img variant="top" src="./assets/share.jpeg" height='175px'/>
                         <Card.Body>
