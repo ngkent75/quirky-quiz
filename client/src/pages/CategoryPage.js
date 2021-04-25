@@ -10,7 +10,7 @@ function CategoryPage () {
         <>
             <Bubbles/>
             <Navigation />
-            <Category />
+            {/* <Category /> */}
         </>
     )
 }

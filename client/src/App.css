@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.card {
+ min-height: 415px;
+ margin-bottom: 20px;
+}
+
 .questionField{
   background-color: #ffffffd9;
   margin: 100px;
