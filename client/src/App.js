@@ -9,6 +9,7 @@ import "./App.css";
 import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
 import CreateSignUpForm from "./components/CreateSignUpForm";
+import CategoryPage from "./pages/CategoryPage"
 import { StoreProvider } from "./utils/GlobalState";
 import { useAuth0 } from "@auth0/auth0-react";
 import LoginBtn from "./components/LoginBtn";
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/home" component={Homepage} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/category/:id" component={CategoryPage} />
             <Route exact path="/quiz/:id" component={Quiz} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/signUp" component={CreateSignUpForm} />

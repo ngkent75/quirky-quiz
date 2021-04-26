@@ -26,7 +26,7 @@ function Homepage () {
                                 <Card.Text>
                                     The various classifications of art include: fine art, visual art, plastic art, performance art, applied art and decorative art.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/2'}}>
+                                <Link to={{pathname: '/category/1'}}>
                                     <Button variant="outline-primary">Art Category </Button> </Link>
                             </Card.Body>
                         </Card>
@@ -39,7 +39,7 @@ function Homepage () {
                                 <Card.Text>
                                     Science is the pursuit and application of knowledge and understanding of the natural and social world.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/6'}}> 
+                                <Link to={{pathname: '/category/2'}}> 
                                 <Button variant="outline-info">Science Category </Button> </Link>
                             </Card.Body>
                         </Card>
@@ -52,7 +52,7 @@ function Homepage () {
                                 <Card.Text>
                                     The different types of sports categories include: individual sports, partner sports, team sports, and extreme sports.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/7'}}> 
+                                <Link to={{pathname: '/category/3'}}> 
                                 <Button variant="outline-success">Sports Category </Button> </Link>
                             </Card.Body>
                         </Card>
@@ -67,7 +67,7 @@ function Homepage () {
                                 <Card.Text>
                                     The types of entertainment include: movies, tv shows, books, video games, and music.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/1'}}> 
+                                <Link to={{pathname: '/category/4'}}> 
                                 <Button variant="outline-warning">Entertainment Category </Button> </Link>
                             </Card.Body>
                         </Card>
@@ -80,7 +80,7 @@ function Homepage () {
                                 <Card.Text>
                                     Geography is the study of places and the relationships between people and their environments.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/3'}}> 
+                                <Link to={{pathname: '/category/5'}}> 
                                 <Button variant="outline-danger">Geography Category </Button> </Link>
                             </Card.Body>
                         </Card>
@@ -93,7 +93,7 @@ function Homepage () {
                                 <Card.Text>
                                     History is the study of people, actions, decisions, interactions and behaviours.
                                 </Card.Text>
-                                <Link to={{pathname: '/quiz/4'}}> 
+                                <Link to={{pathname: '/category/6'}}> 
                                 <Button variant="outline-dark">History Category </Button> </Link>
                             </Card.Body>
                         </Card>
