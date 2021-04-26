@@ -76,6 +76,3 @@ export const AppContext = createContext(true);
 export function useAppContext() {
   return useContext(AppContext);
 }
-
-export { StoreProvider, useStoreContext };
-
