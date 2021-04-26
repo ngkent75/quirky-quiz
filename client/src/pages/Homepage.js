@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Bubbles from '../components/Bubbles';
 import '../App.css';
@@ -11,6 +11,7 @@ import '../App.css';
 function Homepage () {
     return (
         <>
+        <Container>
             <Bubbles />
             <Navigation />
             <div className='container logo' align='center'>
@@ -102,6 +103,7 @@ function Homepage () {
             </div>
             
             <Footer/>
+        </Container> 
         </>
     )
     };
