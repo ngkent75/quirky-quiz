@@ -7,37 +7,29 @@ const sequelize = require("./config/connection");
 const app = express();
 const session = require("express-session");
 require("dotenv").config();
+const cookieParser = require("cookie-parser");
+
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Send every request to the React app
-// Define any API routes before this runs
-
-// ian commented out
-
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
-
-//  ian commented out
-
-// app.listen(PORT, function () {
-//   console.log(`🌎 ==> API server now on port ${PORT}!`);
-// });
-
+const sess = {
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitializes: true,
+  cookie: {
+    expires: 3600000,
+  },
+};
+app.use(session(sess));
 app.use(cors());
-
-app.use("/login", (req, res) => {
-  res.send({
-    token: "test123",
-  });
-});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser("secret"));
 
 app.use(routes);
 
