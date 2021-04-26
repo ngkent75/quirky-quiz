@@ -4,6 +4,7 @@ import {
   SET_CURRENT_POST,
   ADD_POST,
   ADD_USER,
+  SET_CURRENT_USER,
   LOADING
 } from "./actions";
 
@@ -18,6 +19,12 @@ const reducer = (state, action) => {
         ...state,
         currentPost: action.post,
         loading: false,
+      };
+    case SET_CURRENT_USER:
+      return {
+        ...state,
+        currentUser: action.user,
+        loading: false
       };
     case ADD_POST:
       return {
@@ -38,12 +45,6 @@ const reducer = (state, action) => {
         ...state,
         loading: true,
       };
-    case ADD_USER:
-      return {
-        ...state,
-        users: [action.user, ...state.users],
-        loading: false,
-      };
     default:
       return state;
   }
@@ -53,7 +54,11 @@ const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     posts: [],
     users: [],
-<
+    currentUser: {
+      id: 0,
+      username: "",
+      password: ""
+    },
     loading: false
   });
 
@@ -64,4 +69,10 @@ const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
-export { StoreProvider, useStoreContext };
+export { StoreProvider, useStoreContext }
+
+export const AppContext = createContext(true);
+
+export function useAppContext() {
+  return useContext(AppContext);
+}
