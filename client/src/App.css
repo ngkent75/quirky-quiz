@@ -65,6 +65,20 @@
   text-decoration: underline;
 }
 
+.past-results {
+  background: #ffffffe6;
+}
+
+.results-page-header{
+  margin: 34px;
+  font-size: 54px;
+  text-align: center;
+}
+
+.results-list {
+  list-style-type: none;
+}
+
 .save-button {
   font-size: 24px;
   background: none;

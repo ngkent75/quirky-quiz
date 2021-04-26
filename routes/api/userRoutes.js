@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
+ 
 router.get('/:id', withAuth, async (req, res, next) => {
     console.log(req.params.id);
     try {
