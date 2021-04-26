@@ -1,6 +1,6 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import Login from "../components/Login/Login";
+// import Navigation from "../components/Navigation";
+import Login from "../components/Login";
 
 const LoginPage = () => {
 
@@ -8,7 +8,7 @@ const LoginPage = () => {
   
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <Login />
     </>
   );

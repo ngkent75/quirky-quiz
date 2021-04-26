@@ -8,7 +8,6 @@ import About from "./pages/About";
 import "./App.css";
 import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
-import SignUpPage from "./pages/SignUpPage";
 import CreateSignUpForm from "./components/CreateSignUpForm";
 import CategoryPage from "./pages/CategoryPage"
 import { StoreProvider } from "./utils/GlobalState";
@@ -26,9 +25,7 @@ function App() {
             <Route exact path="/category/:id" component={CategoryPage} />
             <Route exact path="/quiz/:id" component={Quiz} />
             <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/register" component={SignUpPage} />
-            {/* Test route for login */}
-            <Route exact path="/loginTest" component={CreateSignUpForm} />
+            <Route exact path="/signUp" component={CreateSignUpForm} />
           </StoreProvider>
         </Container>
       </Router>
