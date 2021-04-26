@@ -45,12 +45,6 @@ const reducer = (state, action) => {
         ...state,
         loading: true,
       };
-    case ADD_USER:
-      return {
-        ...state,
-        users: [action.user, ...state.users],
-        loading: false,
-      };
     default:
       return state;
   }
@@ -75,7 +69,6 @@ const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
-<<<<<<< HEAD
 export { StoreProvider, useStoreContext }
 
 export const AppContext = createContext(true);
@@ -83,6 +76,3 @@ export const AppContext = createContext(true);
 export function useAppContext() {
   return useContext(AppContext);
 }
-=======
-export { StoreProvider, useStoreContext };
->>>>>>> main

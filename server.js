@@ -9,7 +9,7 @@ const session = require("express-session");
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -26,6 +26,12 @@ const sess = {
 };
 app.use(session(sess));
 app.use(cors());
+
+// app.use("/login", (req, res) => {
+//   res.send({
+//     token: "test123",
+//   });
+// });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
