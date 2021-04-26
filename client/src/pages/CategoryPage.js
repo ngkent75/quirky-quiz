@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Category from '../components/Category';
 import Bubbles from '../components/Bubbles';
 import API from '../utils/API';
 

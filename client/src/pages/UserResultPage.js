@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Bubbles from '../components/Bubbles';
@@ -24,10 +23,30 @@ const UserResultPage = () => {
         <>
             <Bubbles/>
             <Navigation />
-            <h1 className="results-page-header">{userName}</h1>
-            <ul className="results-list">
+            <div className='past-results'>
+            <h1 className="results-page-header">{userName}'s Results</h1>
+            <table>
+              <thead>
+              <tr>
+              <th>Quiz title</th>
+              <th>Your Result</th>
+              </tr>
+              </thead>
+              <tbody>
+              {results.map((result) => {
+                return (
+                <tr key={result.id} className="result-item">
+                  <td>{result.quiz_title}</td>
+                  <td>{result.result}</td>
+                </tr>
+                )
+              })}
+              </tbody>
+            </table>
+            {/* <ul className="results-list">
             {results.map(result => <li key={result.id} classname="result-item">{result.quiz_title}{result.result}</li>)}
-            </ul> 
+            </ul>  */}
+            </div>
         </>
     )
 }
