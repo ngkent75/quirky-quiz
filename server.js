@@ -27,27 +27,12 @@ const sess = {
 app.use(session(sess));
 app.use(cors());
 
-<<<<<<< HEAD
-app.use("/login", (req, res) => {
-  res.send({
-    token: "test123",
-  });
-});
+// app.use("/login", (req, res) => {
+//   res.send({
+//     token: "test123",
+//   });
+// });
 
-const sess = {
-  secret: process.env.SECRET,
-  cookie: {},
-  resave: false,
-  saveUnitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
-};
-
-app.use(session(sess));
-
-=======
->>>>>>> main
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser("secret"));
