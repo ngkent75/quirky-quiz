@@ -1,11 +1,11 @@
 import React, { useRef, } from "react";
 // import API from "../utils/API";
-import { useAppContext, } from "../../utils/GlobalState";
+// import { useAppContext, } from "../../utils/GlobalState";
 // import { SET_CURRENT_USER, LOADING } from "../../utils/actions";
 import axios from "axios";
 
 const Login = () => {
-  const { setLoggedIn } = useAppContext();
+  // const { setLoggedIn } = useAppContext();
   const usernameRefL = useRef();
   const passwordRefL = useRef();
   const usernameRefS = useRef();
@@ -19,7 +19,7 @@ const Login = () => {
     const password = passwordRefL.current.value;
 
     if (username && password) {
-      await axios.post('/api/user', { username, password }, { withCredentials: true })
+      await axios.post('/api/user/login', { username, password }, { withCredentials: true })
         .then(res => {
           // setLoggedIn(true);
           document.location.replace('/')

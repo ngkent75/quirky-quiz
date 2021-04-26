@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
             return;
         }
         
-        const checkPass = await userData.checkPassword(req,body.password);
+        const checkPass = await userData.checkPassword(req.body.password);
 
         if(!checkPass) {
             res.status(400).json({ message: "Sorry! Incorrect username or password." })
