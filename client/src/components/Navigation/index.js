@@ -20,43 +20,27 @@ class Navigation extends React.Component {
     }
 
     render() {
-        let isLoggedIn = this.state.isLoggedIn;
+         let isLoggedIn = this.state.isLoggedIn;
         console.log(isLoggedIn);
         let button;
 
-        const sessionCheck = () => {
-            axios.post('/api/user/sessionid', { withCredentials: true })
-            .then(res => console.log(res.data.id))
-            .catch(err => console.log(err))   
-            // return sessionId;
-
-        }
-
-        
-
-        async function handleLogout() {
+        const handleLogout = async () => {
+            // e.preventDefault();
+            this.setState({ isLoggedIn: true });
             console.log('logout')
             console.log(isLoggedIn)
             await axios.post('/api/user/logout', { withCredentials: true })
-            .then(() => {
-                console.log('Logout successful')
-            })
-            .catch(err => console.log(err));
-            this.setState({ isLoggedIn: true });
-            // document.location.replace('/Home')
-        }
-        
-
-        const testLog = () => {
-            // console.log(isLoggedIn)
-            // console.log(sessionCheck());
-            sessionCheck();
+                .then(() => {
+                    console.log('Logout successful')
+                    document.location.replace('/Home')
+                })
+                .catch(err => console.log(err));
         }
 
         if (isLoggedIn) {
-            button = <Button className="nav-button" onClick={handleLogout}>Logout</Button>
+            button = <NavLink className="nav-button" onClick={this.handleLogoutClick} to="/login">Login</NavLink>
         } else {
-            button = <NavLink className="nav-button" onClick={this.handleLoginClick} to="/login">Login</NavLink>
+            button = <Button className="nav-button" onClick={handleLogout} to="/login">Logout</Button>
         }
         return (
             <Container>
@@ -70,7 +54,6 @@ class Navigation extends React.Component {
                             <NavLink className="nav-button" to="/about">About</NavLink>
                         </Nav>
                         {button}
-                        <Button className="nav-button" onClick={testLog} to="/login">Test</Button>
                     </Navbar.Collapse>
                 </Navbar>
             </Container>
