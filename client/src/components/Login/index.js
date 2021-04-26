@@ -44,28 +44,30 @@ const Login = () => {
   }
 
   return (
-    <>
-      <div>
-        <h1>Login here:</h1>
-        <form className="form-group mt-5 mb-5" onSubmit={handleLogin}>
-          <input className="form-control mb-5" required ref={usernameRefL} placeholder="Username" />
-          <input className="form-control mb-5" ref={passwordRefL} placeholder="Password" />
-          <button className="btn btn-success mt-3 mb-5" type="submit">
-            Login
-        </button>
-        </form>
+    <div className='container justify-content-center align-items-center'>
+      <div className='row'>
+        <div className='col-12 md-auto home-card'>
+          <h1>Login here:</h1>
+          <form className="form-group mt-5 mb-5" onSubmit={handleLogin}>
+            <input className="form-control mb-5" required ref={usernameRefL} placeholder="Username" />
+            <input className="form-control mb-5" ref={passwordRefL} placeholder="Password" />
+            <button className="btn btn-primary mt-3 mb-5" type="submit">
+              Login
+          </button>
+          </form>
+        </div>
+        <div className='col-12 md-auto home-card'>
+          <h1>Sign up here:</h1>
+          <form className="form-group mt-5 mb-5" onSubmit={handleSignup}>
+            <input className="form-control mb-5" required ref={usernameRefS} placeholder="Username" />
+            <input className="form-control mb-5" ref={passwordRefS} placeholder="Password" />
+            <button className="btn btn-danger mt-3 mb-5" type="submit">
+              Sign Up
+          </button>
+          </form>
+        </div>
       </div>
-      <div>
-        <h1>Sign up here:</h1>
-        <form className="form-group mt-5 mb-5" onSubmit={handleSignup}>
-          <input className="form-control mb-5" required ref={usernameRefS} placeholder="Username" />
-          <input className="form-control mb-5" ref={passwordRefS} placeholder="Password" />
-          <button className="btn btn-success mt-3 mb-5" type="submit">
-            Sign Up
-        </button>
-        </form>
-      </div>
-    </>
+    </div>
   )
 };
 

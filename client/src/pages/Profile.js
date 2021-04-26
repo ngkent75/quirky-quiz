@@ -2,7 +2,7 @@
 // import Login from '../components/Login/Login';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Particle from '../components/Particles';
 import '../App.css';
@@ -16,6 +16,7 @@ const Profile = () => {
 
     return (
         <>
+        <Container>
             <Navigation />
             <Particle />
             <h1>User's Profile</h1>
@@ -76,6 +77,7 @@ const Profile = () => {
                 </div>
             </div>
             <Footer />
+            </Container>
         </>
     )
 };
