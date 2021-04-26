@@ -3,7 +3,6 @@ import React, { useRef, } from "react";
 // import { useAppContext, } from "../../utils/GlobalState";
 // import { SET_CURRENT_USER, LOADING } from "../../utils/actions";
 import axios from "axios";
-import './style.css';
 
 const Login = () => {
   // const { setLoggedIn } = useAppContext();
@@ -45,9 +44,9 @@ const Login = () => {
   }
 
   return (
-    <div className='container'>
+    <div className='container justify-content-center align-items-center'>
       <div className='row'>
-        <div className='col-12 md-auto'>
+        <div className='col-12 md-auto home-card'>
           <h1>Login here:</h1>
           <form className="form-group mt-5 mb-5" onSubmit={handleLogin}>
             <input className="form-control mb-5" required ref={usernameRefL} placeholder="Username" />
@@ -57,7 +56,7 @@ const Login = () => {
           </button>
           </form>
         </div>
-        <div className='col-12 md-auto'>
+        <div className='col-12 md-auto home-card'>
           <h1>Sign up here:</h1>
           <form className="form-group mt-5 mb-5" onSubmit={handleSignup}>
             <input className="form-control mb-5" required ref={usernameRefS} placeholder="Username" />
