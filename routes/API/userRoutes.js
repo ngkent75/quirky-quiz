@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../client/src/utils/auth');
 const { User, Quiz, UserResult } = require('../../models');
 
 router.get('/', async (req, res) => {
@@ -20,7 +21,8 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res, next) => {
+    console.log(req.params.id);
     try {
         const userData = await User.findByPk(req.params.id, {
             include:
@@ -33,11 +35,54 @@ router.get('/:id', async (req, res) => {
                     }
                 ]
         });
-        res.status(200).json(userData);
+        console.log(userData);
+        const userSerialize = JSON.parse(JSON.stringify(userData));
+        res.status(200).json(userSerialize);
     } catch (err) {
         res.status(500).json(err);
     }
 });
+
+router.post('/login', async (req, res) => {
+    try {
+        const userData = await User.findOne({
+            where: {
+                username: req.body.username,
+            },
+        });
+
+        if(!userData) {
+            res.status(400).json({ message: "Sorry! Incorrect username or password." })
+            return;
+        }
+        
+        const checkPass = await userData.checkPassword(req,body.password);
+
+        if(!checkPass) {
+            res.status(400).json({ message: "Sorry! Incorrect username or password." })
+            return;
+        };
+
+        const userSerializeID = (JSON.parse(JSON.stringify(userData.id)));
+        
+        req.session.user_id = userSerializeID;
+        req.session.loggedIn = true;
+        res.json(req.session)
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.post("/logout", (req, res) => {
+    if (req.session.loggedIn) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).end()
+    }
+})
 
 router.post('/', async (req, res) => {
     console.log(req.body);

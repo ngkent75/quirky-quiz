@@ -1,87 +1,42 @@
-import React, { Component } from "react";
+import React, { useRef } from "react";
+import { useAppContext, } from "../../utils/GlobalState";
+import axios from "axios";
 
-class Signup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      usename: "",
-      email: "",
-      password: "",
-    };
-  }
+const Signup = () => {
+  const { setLoggedIn } = useAppContext();
+  const usernameRef = useRef();
+  const passwordRef = useRef();
+  // const history = useHistory();
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  
-  // handleSubmit =  async event => {
-  //     this.setState({
-  //         [event.target.name]
-  //     })
-  // }
-  render() {
-    return (
-      <div className="container justify-content-center w-50 align-self-center ">
-        <div className="wrapper ">
-          <form className="form-signin" /*onSubmit={handleSubmit}*/>
-            <h2 className="form-signin-heading">Sign Up</h2>
-            <input
-              type="text"
-              className="form-control mb-2"
-              name="username"
-              placeholder="Username"
-              required=""
-              // onChange={(event) => setUserName(event.target.value)}
-            />
-            <input
-              type="email"
-              className="form-control mb-2"
-              name="email"
-              placeholder="Email"
-              required=""
-              // onChange={(event) => setPassword(event.target.value)}
-            />
+    const username = usernameRef.current.value;
+    const password = passwordRef.current.value;
 
-            <input
-              type="password"
-              className="form-control mb-4"
-              name="password"
-              placeholder="Password"
-              required=""
-              // onChange={(event) => setPassword(event.target.value)}
-            />
+    if (username && password) {
+      await axios.post('/api/user', { username, password }, { withCredentials: true })
+        .then(res => {
+          setLoggedIn(true);
+          document.location.replace('/')
+        })
+        .catch(err => console.log(err));
+    }
+    
+  };
 
-            <button className="btn btn-lg btn-primary btn-block" type="submit">
-              Sign Up
-            </button>
-          </form>
-        </div>
-      </div>
-    );
-  }
-}
-export default Signup;
-
-<>
-  <form>
-    <h3>Sign Up</h3>
-
-    <div className="form-group">
-      <label>Username</label>
-      <input type="" text className="form-control" placeholder="Username" />
+  return (
+    <div>
+      <h1>Login here:</h1>
+      <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
+        <input className="form-control mb-5" required ref={usernameRef} placeholder="Username" />
+        <input className="form-control mb-5" ref={passwordRef} placeholder="Password" />
+        <button className="btn btn-success mt-3 mb-5" type="submit">
+          Login
+        </button>
+      </form>
     </div>
-    <div className="form-group">
-      <label>Email</label>
-      <input type="" text className="form-control" placeholder="Email" />
-    </div>
-    <div className="form-group">
-      <label>Password</label>
-      <input type="" text className="form-control" placeholder="Password" />
-    </div>
+  )
+};
 
-    <button type="submit" className="btn btn-primary btn-block">
-      Sign Up
-    </button>
-    <p className="text-right">
-      Already Registered <a href="#">Sign In?</a>
-    </p>
-  </form>
-</>;
+export default Login;

@@ -8,8 +8,8 @@ import About from "./pages/About";
 import "./App.css";
 import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
-import SignUpPage from "./pages/SignUpPage";
 import CreateSignUpForm from "./components/CreateSignUpForm";
+import Login from "./components/Login";
 import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
@@ -24,9 +24,8 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/quiz/:id" component={Quiz} />
             <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/register" component={SignUpPage} />
-            {/* Test route for login */}
-            <Route exact path="/loginTest" component={CreateSignUpForm} />
+            <Route exact path="/signUp" component={CreateSignUpForm} />
+            <Route exact path="/logintest" component={Login} />
           </StoreProvider>
         </Container>
       </Router>
