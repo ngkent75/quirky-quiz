@@ -9,7 +9,6 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
 import UserResultPage from "./pages/UserResultPage";
-import CreateSignUpForm from "./components/CreateSignUpForm";
 import CategoryPage from "./pages/CategoryPage";
 import { StoreProvider } from "./utils/GlobalState";
 
