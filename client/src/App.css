@@ -33,6 +33,10 @@
  margin-bottom: 20px;
 }
 
+.card-text {
+  min-height: 110px;
+}
+
 .questionField{
   background-color: #ffffffd9;
   margin: 100px;

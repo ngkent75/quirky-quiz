@@ -16,28 +16,18 @@ const Quiz = () => {
 
 
   useEffect(() => {
-    console.log("primary key of quiz:", id);
     API.getQuiz(id)
     .then(results => {
       setQuestions(results.data.questions)
       setCurrentQuiz(results.data.title)
     })
   }, [id]);
-  
-  useEffect(() => {
-    console.log(quizResults);
-  }, [quizResults])
-
-  useEffect(() => {
-    console.log(finalResult);
-  }, [finalResult])
 
   const tallyResult = (answerzArr) => {
     let maxCount = 0;
     let currentCount = 1;
     let winner;
     answerzArr.sort();
-    console.log(answerzArr)
     for (let i = 1; i <= answerzArr.length; i++) {
       if (answerzArr[i] === answerzArr[i - 1]) {
         currentCount++;
@@ -64,7 +54,6 @@ const Quiz = () => {
       if (answerArray.length === questions.length) tallyResult(answerArray);
       return answerArray
     });
-    console.log(quizResults);
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
