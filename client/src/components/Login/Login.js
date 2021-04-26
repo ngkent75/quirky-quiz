@@ -1,63 +1,73 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import "./style.css";
+// import React, { useRef } from "react";
+// import { useAuth0 } from "@auth0/auth0-react";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import { ADD_USER, LOADING } from "../../utils/actions";
+// import API from "../../utils/API";
+// import "./style.css";
 
-async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(credentials),
-  }).then((data) => data.json());
-}
+// function LoginUser() {
+//   const usernameRef = useRef();
+//   const passwordRef = useRef();
+//   const [state, dispatch] = useStoreContext();
+//   const { loginWithRedirect } = useAuth0();
 
-export default function Login({ setToken }) {
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     dispatch({ type: LOADING });
+//     API.saveUser({
+//       username: usernameRef.current.value,
+//       password: passwordRef.current.value,
+//     })
+//       .then((result) => {
+//         dispatch({
+//           type: ADD_USER,
+//           user: result.data,
+//         });
+//       })
+//       .catch((err) => console.log(err));
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const token = await loginUser({
-      username,
-      password,
-    });
-    setToken(token);
-  };
-  return (
-    <div className="container justify-content-center w-50 align-self-center ">
-      <div className="wrapper ">
-        <form className="form-signin" onSubmit={handleSubmit}>
-          <h2 className="form-signin-heading">Please Login</h2>
-          <input
-            type="text"
-            className="form-control mb-2"
-            name="username"
-            placeholder="Username"
-            required=""
-            onChange={(event) => setUserName(event.target.value)}
-          />
+//     usernameRef.current.value = "";
+//     passwordRef.current.value = "";
+//   };
 
-          <input
-            type="password"
-            className="form-control mb-4"
-            name="password"
-            placeholder="Password"
-            required=""
-            onChange={(event) => setPassword(event.target.value)}
-          />
+//   return (
+//     <div className="container justify-content-center w-50 align-self-center ">
+//       <div className="wrapper ">
+//         <form className="form-signin" onSubmit={handleSubmit}>
+//           <h2 className="form-signin-heading">Please Login</h2>
+//           <input
+//             type="text"
+//             className="form-control mb-2"
+//             name="username"
+//             placeholder="Username"
+//             required
+//             ref={usernameRef}
+//           />
 
-          <button className="btn btn-lg btn-primary btn-block" type="submit">
-            Login
-          </button>
-          <p className="text-right mt-2">
-            Dont have an account?<a href="/Signup">Sign Up</a>
-          </p>
-        </form>
-      </div>
-    </div>
-  );
-}
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
-};
+//           <input
+//             type="password"
+//             className="form-control mb-4"
+//             name="password"
+//             placeholder="Password"
+//             required
+//             ref={passwordRef}
+//           />
+
+//           <button
+//             className="btn btn-lg btn-primary btn-block"
+//             type="submit"
+//             onClick={() => loginWithRedirect()}
+//             disabled={state.loading}
+//           >
+//             Login
+//           </button>
+//           <p className="text-right mt-2">
+//             Dont have an account?<a href="/register">Sign Up</a>
+//           </p>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default LoginUser;

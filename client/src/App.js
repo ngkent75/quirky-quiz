@@ -7,12 +7,16 @@ import About from "./pages/About";
 // import Footer from './components/Footer';
 import "./App.css";
 import Container from "react-bootstrap/Container";
-import LoginPage from "./pages/LoginPage";
-import SignUpPage from "./pages/SignUpPage";
+// import LoginPage from "./pages/LoginPage";
+// import SignUpPage from "./pages/SignUpPage";
 import CreateSignUpForm from "./components/CreateSignUpForm";
 import { StoreProvider } from "./utils/GlobalState";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginBtn from "./components/LoginBtn";
 
 function App() {
+  const { isLoading } = useAuth0();
+  if (isLoading) return <div>Loading...</div>;
   return (
     <div>
       <Router>
@@ -23,10 +27,11 @@ function App() {
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/about" component={About} />
             <Route exact path="/quiz/:id" component={Quiz} />
-            <Route exact path="/login" component={LoginPage} />
-            <Route exact path="/register" component={SignUpPage} />
+            {/* <Route exact path="/login" component={LoginPage} /> */}
+            {/* <Route exact path="/register" component={SignUpPage} /> */}
             {/* Test route for login */}
             <Route exact path="/loginTest" component={CreateSignUpForm} />
+            <LoginBtn />
           </StoreProvider>
         </Container>
       </Router>
