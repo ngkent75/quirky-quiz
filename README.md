@@ -1,24 +1,28 @@
-#**Quirky Quiz ("Quirky Quiz")**
+# Quirky Quiz
 
 ## Table of Contents
 
-*[Description](#description)
-*[Requirements](#requirements)
-*[Installation](#installation)
-*[Contributing](#contributing)
-*[Credits](#credits)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Technologies Used](#Technologies)
+- [Credits](#credits)
 
 ## Description
+
 ---
 
-A web application that allows users to take and create quizzes on topics of their choice.
+A web application that allows users to take silly quizzes on topics of their choice.
+Created this using ReactJS and MySQL as the database.
 
 Deployed Website:
 
-![QuirkyQuiz](/client/public/assets/QuirkyQuiz.jpg)
+![QuirkyQuiz](images/Screenshot.png)
 
 ## Requirements
+
 ---
+
 ```
 * Must use ReactJS in some way
 * Must use a Node and Express Web Server
@@ -32,15 +36,15 @@ Deployed Website:
 * Must meet good quality coding standards (indentation, scoping, naming)
 * Must protect API keys in Node with environment variables
 ## Presentation Requirements
-Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following: 
+Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following:
 * Elevator pitch: a one minute description of your application
 * Concept: What is your user story? What was your motivation for development?
 * Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
 * Demo: Show your stuff!
 * Directions for Future Development
 * Links to to the deployed application and the GitHub repository
-## Grading Metrics 
-| Metric        | Weight | 
+## Grading Metrics
+| Metric        | Weight |
 | ---           | ---    |
 | Concept       | 10%    |
 | Design        | 20%    |
@@ -54,18 +58,33 @@ You are required to submit the following:
 ```
 
 ## Installation
---- 
+
+---
 
 No installation needed for this project
 
 See deployed site here:
 
-See repository here:
+See repository here: https://github.com/ngkent75/quirky-quiz.git
 
-## Contributing
+## Technologies Used
+
 ---
+
+- REACT
+- Bootstrap
+- Session
+- MySQL
+
 Any and all improvement suggestions are welcome!
 
 ## Credits
+
 ---
-Haleigh Spurlock, Ian Mcbrayer, Nathan Kent, Uriel Rosario &COPY;2021
+
+- [Haleigh Spurlock](https://github.com/haleighspurlock)
+- [Ian Mcbrayer](https://github.com/ihm57511)
+- [Nathan Kent](https://github.com/ngkent75)
+- [Uriel Rosario](https://github.com/urielrosario)
+
+&COPY;2021
