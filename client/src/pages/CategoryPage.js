@@ -25,9 +25,9 @@ const CategoryPage = () => {
         <>
             <Bubbles/>
             <Navigation />
-            <h1>{category}</h1>
-            <ul>
-            {quizzes.map(quiz => <li key={quiz.id}><Link to={'/quiz/' + quiz.id }>{quiz.title}</Link></li>)}
+            <h1 className="category-page-header">{category}</h1>
+            <ul className="quiz-list">
+            {quizzes.map(quiz => <li key={quiz.id} className="quiz-list-button"><Link to={'/quiz/' + quiz.id }>{quiz.title}</Link></li>)}
             </ul>
         </>
     )
