@@ -8,6 +8,7 @@ import About from "./pages/About";
 import "./App.css";
 import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
+import LogoutPage from "./pages/LogoutPage";
 import CreateSignUpForm from "./components/CreateSignUpForm";
 import { StoreProvider } from "./utils/GlobalState";
 
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/quiz/:id" component={Quiz} />
             <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/logout" component={LogoutPage} />
             <Route exact path="/signUp" component={CreateSignUpForm} />
           </StoreProvider>
         </Container>
