@@ -21,6 +21,10 @@ UserResult.init(
         result: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        quiz_title: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {

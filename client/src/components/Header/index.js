@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 function Header() {
     return (
             <Container>
+                <div className='headerComponent'>
                 <h1 className='header'>Welcome to Quirky Quiz!</h1>
                 <p className='welcome'>
                     Please take a moment to read our <span> <Link to='/about'>about</Link> </span> page if you aren't familiar with our site! 
@@ -13,6 +14,7 @@ function Header() {
                 <p className='choice'>
                     Otherwise feel free to <span> <Link to='/profile'>login,</Link> </span> <span> <Link to='/profile'>sign-up</Link> </span>and continue making or taking our Quirky Quizzes!
                 </p>
+                </div>
             </Container>
     );
 }
