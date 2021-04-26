@@ -6,7 +6,6 @@ import Quiz from "./pages/Quiz";
 import About from "./pages/About";
 // import Footer from './components/Footer';
 import "./App.css";
-import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
 import UserResultPage from "./pages/UserResultPage";
@@ -17,7 +16,6 @@ function App() {
   return (
     <div>
       <Router>
-        {/* <Container> */}
           <StoreProvider>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/home" component={Homepage} />
@@ -29,7 +27,6 @@ function App() {
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/logout" component={LogoutPage} />
           </StoreProvider>
-        {/* </Container> */}
       </Router>
     </div>
   );
