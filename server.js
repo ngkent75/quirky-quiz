@@ -2,11 +2,12 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const cors = require("cors"); //cors enables cross origin resource sharing
-const routes = require('./routes');
-const sequelize = require('./config/connection');
+const routes = require("./routes");
+const sequelize = require("./config/connection");
 const app = express();
 const session = require("express-session");
 require("dotenv").config();
+const cookieParser = require("cookie-parser");
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -15,24 +16,18 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
-// Send every request to the React app
-// Define any API routes before this runs
-
-// ian commented out
-
-// app.get("*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
-
-//  ian commented out
-
-// app.listen(PORT, function () {
-//   console.log(`🌎 ==> API server now on port ${PORT}!`);
-// });
-
+const sess = {
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitializes: true,
+  cookie: {
+    expires: 3600000,
+  },
+};
+app.use(session(sess));
 app.use(cors());
 
+<<<<<<< HEAD
 app.use("/login", (req, res) => {
   res.send({
     token: "test123",
@@ -51,11 +46,13 @@ const sess = {
 
 app.use(session(sess));
 
+=======
+>>>>>>> main
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser("secret"));
 
 app.use(routes);
-
 
 sequelize.sync().then(() => {
   app.listen(PORT, () =>

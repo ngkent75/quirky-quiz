@@ -1,4 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
+
 import {
   SET_CURRENT_POST,
   ADD_POST,
@@ -6,6 +7,7 @@ import {
   SET_CURRENT_USER,
   LOADING
 } from "./actions";
+
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -16,7 +18,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         currentPost: action.post,
-        loading: false
+        loading: false,
       };
     case SET_CURRENT_USER:
       return {
@@ -27,6 +29,7 @@ const reducer = (state, action) => {
     case ADD_POST:
       return {
         ...state,
+
         post: [action.post, ...state.posts],
         loading: false
       };
@@ -35,11 +38,18 @@ const reducer = (state, action) => {
         ...state,
         users: [action.user, ...state.users],
         loading: false
+
       };
     case LOADING:
       return {
         ...state,
-        loading: true
+        loading: true,
+      };
+    case ADD_USER:
+      return {
+        ...state,
+        users: [action.user, ...state.users],
+        loading: false,
       };
     default:
       return state;
@@ -65,6 +75,7 @@ const useStoreContext = () => {
   return useContext(StoreContext);
 };
 
+<<<<<<< HEAD
 export { StoreProvider, useStoreContext }
 
 export const AppContext = createContext(true);
@@ -72,3 +83,6 @@ export const AppContext = createContext(true);
 export function useAppContext() {
   return useContext(AppContext);
 }
+=======
+export { StoreProvider, useStoreContext };
+>>>>>>> main
