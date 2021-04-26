@@ -10,7 +10,6 @@ import Container from "react-bootstrap/Container";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
 import UserResultPage from "./pages/UserResultPage";
-import CreateSignUpForm from "./components/CreateSignUpForm";
 import CategoryPage from "./pages/CategoryPage";
 import { StoreProvider } from "./utils/GlobalState";
 
@@ -18,7 +17,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Container>
+        {/* <Container> */}
           <StoreProvider>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/home" component={Homepage} />
@@ -29,9 +28,8 @@ function App() {
             <Route exact path="/quiz/:id" component={Quiz} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/logout" component={LogoutPage} />
-            <Route exact path="/signUp" component={CreateSignUpForm} />
           </StoreProvider>
-        </Container>
+        {/* </Container> */}
       </Router>
     </div>
   );
