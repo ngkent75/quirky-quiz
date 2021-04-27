@@ -12,7 +12,7 @@ function Header() {
                     Please take a moment to read our <span> <Link to='/about'>about</Link> </span> page if you aren't familiar with our site! 
                 </p>
                 <p className='choice'>
-                    Otherwise feel free to <span> <Link to='/profile'>login,</Link> </span> <span> <Link to='/profile'>sign-up</Link> </span>and continue making or taking our Quirky Quizzes!
+                    Otherwise feel free to <span> <Link to='/login'>login,</Link> </span> <span> <Link to='/login'>sign-up</Link> </span>and continue making or taking our Quirky Quizzes!
                 </p>
                 </div>
             </Container>
