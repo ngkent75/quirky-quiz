@@ -104,8 +104,22 @@
   text-align: center;
 }
 
-.results-list {
-  list-style-type: none;
+.user-results {
+  display: flex;
+  justify-content: center;
+}
+
+.results-table {
+  background: #ffffffe6;
+  text-align: center;
+}
+
+.results-table-header {
+  font-size: 32px; 
+}
+
+.results-table-body {
+
 }
 
 .save-button {
@@ -183,6 +197,10 @@
 
   .answer-options {
     font-size: 16px;
+  }
+  
+  .results-table-header {
+    font-size: 24px; 
   }
   
 }

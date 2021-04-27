@@ -25,14 +25,15 @@ const UserResultPage = () => {
       <Navigation />
       <div className='past-results'>
         <h1 className="results-page-header">{userName}'s Results</h1>
-        <table>
-          <thead>
+        <div className='user-results'>
+        <table className='results-table'>
+          <thead className='results-table-header'>
             <tr>
               <th>Quiz title</th>
               <th>Your Result</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='results-table-body'>
             {results.map((result) => {
               return (
                 <tr key={result.id} className="result-item">
@@ -43,6 +44,7 @@ const UserResultPage = () => {
             })}
           </tbody>
         </table>
+        </div>
       </div>
     </>
   )
