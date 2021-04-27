@@ -11,6 +11,7 @@ const UserResultPage = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
+  
     API.getResults(id)
       .then(results => {
         console.log(results)

@@ -20,8 +20,12 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+    const userResult = {
+        ...req.body,
+        user_id: req.session.user_id
+    }
     try {
-        const userResultData = await UserResult.create(req.body);
+        const userResultData = await UserResult.create(userResult);
         res.status(200).json(userResultData);
     } catch (err) {
         res.status(500).json(err);
