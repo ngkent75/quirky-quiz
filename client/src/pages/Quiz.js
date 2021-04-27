@@ -79,8 +79,7 @@ const Quiz = () => {
         questions.length ? (
           <div className="quiz">
             {showResult ? (
-              <div className="resultReveal">
-                <Bubbles/>
+              <div className="result-reveal">
                 <div className="result-prompt">You are most definitely a:</div>
                 <div className="final-result">{finalResult}</div>
                 <button className="save-button" 
@@ -95,6 +94,7 @@ const Quiz = () => {
                 </div>
                 <div className="questionText">{questions[currentQuestion].questionText}</div>
               </section>
+              <div className="answer-field">
                 <ListGroup className="answer-options">
                   {questions[currentQuestion].answers.map(answerOption =>
                     <button className="list-group-item list-group-item-action" key={answerOption.result}
@@ -103,6 +103,7 @@ const Quiz = () => {
                     </button>
                   )}
                 </ListGroup>
+                </div>
               </>
             )}
           </div>) : (

@@ -69,6 +69,8 @@
 .questionField{
   background-color: #ffffffd9;
   margin: 100px;
+  text-align: center;
+  min-height: 250px;
 }
 
 .quiz-title {
@@ -79,9 +81,10 @@
   font-size: 54px;
 }
 
-.resultReveal {
+.result-reveal {
   background: #ffffffe6;
   margin: 100px;
+  text-align: center;
 }
 
 .result-prompt {
@@ -118,10 +121,6 @@
   font-size: 32px; 
 }
 
-.results-table-body {
-
-}
-
 .save-button {
   font-size: 24px;
   background: none;
@@ -136,8 +135,14 @@
   color: #fff;
 }
 
+.answer-field {
+  display: flex;
+  justify-content: center;
+}
+
 .answer-options {
   font-size: 24px;
+  max-width: 500px;
 }
 
 @keyframes App-logo-spin {
@@ -203,4 +208,19 @@
     font-size: 24px; 
   }
   
+  .result-reveal {
+    background: #ffffffe6;
+    margin: 50px;
+    text-align: center;
+  }
+
+  .result-prompt {
+    font-size: 24px;
+  }
+  
+  .final-result {
+    font-size: 34px;
+    margin-bottom: 32px;
+    text-decoration: underline;
+  }
 }
