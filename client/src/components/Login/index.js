@@ -3,6 +3,7 @@ import React, { useRef, } from "react";
 // import { useAppContext, } from "../../utils/GlobalState";
 // import { SET_CURRENT_USER, LOADING } from "../../utils/actions";
 import axios from "axios";
+import './style.css';
 
 const Login = () => {
   // const { setLoggedIn } = useAppContext();
