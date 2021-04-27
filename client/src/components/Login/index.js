@@ -44,7 +44,7 @@ const Login = () => {
   }
 
   return (
-    <div className='container justify-content-center align-items-center'>
+    <div className='container justify-content-center align-items-center log-in'>
       <div className='row'>
         <div className='col-12 md-auto home-card'>
           <h1>Login here:</h1>

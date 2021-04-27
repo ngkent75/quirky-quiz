@@ -26,7 +26,7 @@ const CategoryPage = () => {
             <Navigation />
             <h1 className="category-page-header">{category}</h1>
             <ul className="quiz-list">
-            {quizzes.map(quiz => <li key={quiz.id} className="quiz-list-button"><Link to={'/quiz/' + quiz.id }>{quiz.title}</Link></li>)}
+            {quizzes.map(quiz => <li key={quiz.id}><Link to={'/quiz/' + quiz.id } className="quiz-list-button">{quiz.title}</Link></li>)}
             </ul>
         </>
     )

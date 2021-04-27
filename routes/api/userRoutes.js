@@ -20,8 +20,8 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
- 
-router.get('/:id', withAuth, async (req, res, next) => {
+//   withAuth,
+router.get('/:id', async (req, res, next) => {
     console.log(req.params.id);
     try {
         const userData = await User.findByPk(req.params.id, {
